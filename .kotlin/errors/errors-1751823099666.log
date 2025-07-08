@@ -1,0 +1,926 @@
+kotlin version: 2.1.0
+error message: org.jetbrains.kotlin.backend.common.BackendException: Backend Internal error: Exception during IR lowering
+File being compiled: D:/the chance/AndroidCompose/Caffeine/app/src/main/java/com/menna/caffeine/component/ChooseDrinkPager.kt
+The root cause java.lang.RuntimeException was thrown at: org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:48)
+	at org.jetbrains.kotlin.backend.common.CodegenUtil.reportBackendException(CodegenUtil.kt:253)
+	at org.jetbrains.kotlin.backend.common.CodegenUtil.reportBackendException$default(CodegenUtil.kt:236)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invokeSequential(performByIrFile.kt:55)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invoke(performByIrFile.kt:42)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invoke(performByIrFile.kt:28)
+	at org.jetbrains.kotlin.backend.common.phaser.NamedCompilerPhase.phaseBody(CompilerPhase.kt:166)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.CompositePhase.invoke(PhaseBuilders.kt:27)
+	at org.jetbrains.kotlin.backend.common.phaser.CompositePhase.invoke(PhaseBuilders.kt:14)
+	at org.jetbrains.kotlin.backend.common.phaser.NamedCompilerPhase.phaseBody(CompilerPhase.kt:166)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.CompilerPhaseKt.invokeToplevel(CompilerPhase.kt:62)
+	at org.jetbrains.kotlin.backend.jvm.JvmIrCodegenFactory.invokeCodegen(JvmIrCodegenFactory.kt:371)
+	at org.jetbrains.kotlin.codegen.CodegenFactory.generateModule(CodegenFactory.kt:47)
+	at org.jetbrains.kotlin.backend.jvm.JvmIrCodegenFactory.generateModuleInFrontendIRMode(JvmIrCodegenFactory.kt:433)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineKt.generateCodeFromIr(jvmCompilerPipeline.kt:192)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineKt.runBackend(jvmCompilerPipeline.kt:80)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineLightTreeKt.compileModule(jvmCompilerPipelineLightTree.kt:264)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineLightTreeKt.compileSingleModuleUsingFrontendIrAndLightTree(jvmCompilerPipelineLightTree.kt:231)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineLightTreeKt.compileModulesUsingFrontendIrAndLightTree(jvmCompilerPipelineLightTree.kt:86)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.doExecute(K2JVMCompiler.kt:146)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.doExecute(K2JVMCompiler.kt:43)
+	at org.jetbrains.kotlin.cli.common.CLICompiler.execImpl(CLICompiler.kt:102)
+	at org.jetbrains.kotlin.cli.common.CLICompiler.exec(CLICompiler.kt:316)
+	at org.jetbrains.kotlin.incremental.IncrementalJvmCompilerRunner.runCompiler(IncrementalJvmCompilerRunner.kt:464)
+	at org.jetbrains.kotlin.incremental.IncrementalJvmCompilerRunner.runCompiler(IncrementalJvmCompilerRunner.kt:73)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.doCompile(IncrementalCompilerRunner.kt:506)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compileImpl(IncrementalCompilerRunner.kt:423)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.tryCompileIncrementally$lambda$9$compile(IncrementalCompilerRunner.kt:249)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.tryCompileIncrementally(IncrementalCompilerRunner.kt:267)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compile(IncrementalCompilerRunner.kt:120)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.execIncrementalCompiler(CompileServiceImpl.kt:674)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.access$execIncrementalCompiler(CompileServiceImpl.kt:91)
+	at org.jetbrains.kotlin.daemon.CompileServiceImpl.compile(CompileServiceImpl.kt:1659)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(Unknown Source)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Unknown Source)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.RuntimeException: Exception while generating code for:
+FUN name:ChooseDrinkPager visibility:public modality:FINAL <> (modifier:androidx.compose.ui.Modifier?, $composer:androidx.compose.runtime.Composer?, $changed:kotlin.Int, $default:kotlin.Int) returnType:kotlin.Unit
+  annotations:
+    Composable
+    ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+  VALUE_PARAMETER name:modifier index:0 type:androidx.compose.ui.Modifier? [assignable]
+  VALUE_PARAMETER name:$composer index:1 type:androidx.compose.runtime.Composer? [assignable]
+  VALUE_PARAMETER name:$changed index:2 type:kotlin.Int
+  VALUE_PARAMETER MASK_FOR_DEFAULT_FUNCTION name:$default index:3 type:kotlin.Int
+  BLOCK_BODY
+    BLOCK type=kotlin.Unit origin=null
+      SET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=kotlin.Unit origin=null
+        CALL 'public abstract fun startRestartGroup (key: kotlin.Int): androidx.compose.runtime.Composer declared in androidx.compose.runtime.Composer' type=androidx.compose.runtime.Composer origin=null
+          $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=androidx.compose.runtime.Composer? origin=null
+          key: CONST Int type=kotlin.Int value=871650407
+      CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+        composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=androidx.compose.runtime.Composer? origin=null
+        sourceInformation: CONST String type=kotlin.String value="C(ChooseDrinkPager)47@1787L15,45@1688L120,50@1814L3036:ChooseDrinkPager.kt#az8c86"
+    VAR name:$dirty type:kotlin.Int [val]
+      GET_VAR '$changed: kotlin.Int declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=kotlin.Int origin=null
+    WHEN type=kotlin.Unit origin=IF
+      BRANCH
+        if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+          $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+            arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+              $this: GET_VAR '$default: kotlin.Int declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=kotlin.Int origin=null
+              other: CONST Int type=kotlin.Int value=1
+            arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=6
+      BRANCH
+        if: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+          arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR '$changed: kotlin.Int declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=6
+          arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=kotlin.Int origin=null
+            other: WHEN type=kotlin.Int origin=IF
+              BRANCH
+                if: CALL 'public abstract fun changed (value: kotlin.Any?): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                  $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=androidx.compose.runtime.Composer? origin=null
+                  value: GET_VAR 'modifier: androidx.compose.ui.Modifier? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=androidx.compose.ui.Modifier? origin=null
+                then: CONST Int type=kotlin.Int value=4
+              BRANCH
+                if: CONST Boolean type=kotlin.Boolean value=true
+                then: CONST Int type=kotlin.Int value=2
+    WHEN type=kotlin.Unit origin=IF
+      BRANCH
+        if: CALL 'public final fun OROR (arg0: kotlin.Boolean, arg1: kotlin.Boolean): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+          arg0: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+            $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+              arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=kotlin.Int origin=null
+                other: CONST Int type=kotlin.Int value=3
+              arg1: CONST Int type=kotlin.Int value=2
+          arg1: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+            $this: CALL 'public abstract fun <get-skipping> (): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+              $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=androidx.compose.runtime.Composer? origin=null
+        then: BLOCK type=kotlin.Unit origin=null
+          WHEN type=kotlin.Unit origin=IF
+            BRANCH
+              if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+                $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                  arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                    $this: GET_VAR '$default: kotlin.Int declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=kotlin.Int origin=null
+                    other: CONST Int type=kotlin.Int value=1
+                  arg1: CONST Int type=kotlin.Int value=0
+              then: SET_VAR 'modifier: androidx.compose.ui.Modifier? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=kotlin.Unit origin=null
+                GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:Companion type:androidx.compose.ui.Modifier.Companion visibility:public [final,static] declared in androidx.compose.ui.Modifier' type=androidx.compose.ui.Modifier.Companion origin=null
+          WHEN type=kotlin.Unit origin=IF
+            BRANCH
+              if: CALL 'public final fun isTraceInProgress (): kotlin.Boolean declared in androidx.compose.runtime.ComposerKt' type=kotlin.Boolean origin=null
+              then: CALL 'public final fun traceEventStart (key: kotlin.Int, dirty1: kotlin.Int, dirty2: kotlin.Int, info: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                key: CONST Int type=kotlin.Int value=871650407
+                dirty1: GET_VAR 'val $dirty: kotlin.Int [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=kotlin.Int origin=null
+                dirty2: CONST Int type=kotlin.Int value=-1
+                info: CONST String type=kotlin.String value="com.menna.caffeine.component.ChooseDrinkPager (ChooseDrinkPager.kt:38)"
+          VAR name:drinks type:kotlin.collections.List<com.menna.caffeine.component.DrinkItem> [val]
+            CALL 'public final fun listOf <T> (vararg elements: T of kotlin.collections.CollectionsKt.listOf): kotlin.collections.List<T of kotlin.collections.CollectionsKt.listOf> declared in kotlin.collections.CollectionsKt' type=kotlin.collections.List<com.menna.caffeine.component.DrinkItem> origin=null
+              <T>: com.menna.caffeine.component.DrinkItem
+              elements: BLOCK type=kotlin.Array<out com.menna.caffeine.component.DrinkItem> origin=null
+                VAR IR_TEMPORARY_VARIABLE name:tmp0 type:kotlin.Array<out com.menna.caffeine.component.DrinkItem> [val]
+                  CALL 'public final fun arrayOfNulls <T> (size: kotlin.Int): kotlin.Array<T of kotlin.arrayOfNulls?> declared in kotlin' type=kotlin.Array<out com.menna.caffeine.component.DrinkItem> origin=null
+                    <T>: com.menna.caffeine.component.DrinkItem
+                    size: CONST Int type=kotlin.Int value=3
+                CALL 'public final fun set (index: kotlin.Int, value: T of kotlin.Array): kotlin.Unit [operator] declared in kotlin.Array' type=kotlin.Unit origin=null
+                  $this: GET_VAR 'val tmp0: kotlin.Array<out com.menna.caffeine.component.DrinkItem> [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=kotlin.Array<out com.menna.caffeine.component.DrinkItem> origin=null
+                  index: CONST Int type=kotlin.Int value=0
+                  value: CONSTRUCTOR_CALL 'public constructor <init> (imageRes: kotlin.Int, name: kotlin.String) [primary] declared in com.menna.caffeine.component.DrinkItem' type=com.menna.caffeine.component.DrinkItem origin=null
+                    imageRes: GET_FIELD 'FIELD IR_EXTERNAL_JAVA_DECLARATION_STUB name:macchiato type:kotlin.Int visibility:public [static] declared in com.menna.caffeine.R.drawable' type=kotlin.Int superQualifierSymbol=com.menna.caffeine.R.drawable origin=null
+                    name: CONST String type=kotlin.String value="Macchiato"
+                CALL 'public final fun set (index: kotlin.Int, value: T of kotlin.Array): kotlin.Unit [operator] declared in kotlin.Array' type=kotlin.Unit origin=null
+                  $this: GET_VAR 'val tmp0: kotlin.Array<out com.menna.caffeine.component.DrinkItem> [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=kotlin.Array<out com.menna.caffeine.component.DrinkItem> origin=null
+                  index: CONST Int type=kotlin.Int value=1
+                  value: CONSTRUCTOR_CALL 'public constructor <init> (imageRes: kotlin.Int, name: kotlin.String) [primary] declared in com.menna.caffeine.component.DrinkItem' type=com.menna.caffeine.component.DrinkItem origin=null
+                    imageRes: GET_FIELD 'FIELD IR_EXTERNAL_JAVA_DECLARATION_STUB name:latte type:kotlin.Int visibility:public [static] declared in com.menna.caffeine.R.drawable' type=kotlin.Int superQualifierSymbol=com.menna.caffeine.R.drawable origin=null
+                    name: CONST String type=kotlin.String value="Latte"
+                CALL 'public final fun set (index: kotlin.Int, value: T of kotlin.Array): kotlin.Unit [operator] declared in kotlin.Array' type=kotlin.Unit origin=null
+                  $this: GET_VAR 'val tmp0: kotlin.Array<out com.menna.caffeine.component.DrinkItem> [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=kotlin.Array<out com.menna.caffeine.component.DrinkItem> origin=null
+                  index: CONST Int type=kotlin.Int value=2
+                  value: CONSTRUCTOR_CALL 'public constructor <init> (imageRes: kotlin.Int, name: kotlin.String) [primary] declared in com.menna.caffeine.component.DrinkItem' type=com.menna.caffeine.component.DrinkItem origin=null
+                    imageRes: GET_FIELD 'FIELD IR_EXTERNAL_JAVA_DECLARATION_STUB name:black type:kotlin.Int visibility:public [static] declared in com.menna.caffeine.R.drawable' type=kotlin.Int superQualifierSymbol=com.menna.caffeine.R.drawable origin=null
+                    name: CONST String type=kotlin.String value="Black"
+                GET_VAR 'val tmp0: kotlin.Array<out com.menna.caffeine.component.DrinkItem> [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=kotlin.Array<out com.menna.caffeine.component.DrinkItem> origin=null
+          VAR name:pagerState type:androidx.compose.foundation.pager.PagerState [val]
+            CALL 'public final fun rememberPagerState (initialPage: kotlin.Int, initialPageOffsetFraction: kotlin.Float, pageCount: kotlin.Function0<kotlin.Int>, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $default: kotlin.Int): androidx.compose.foundation.pager.PagerState declared in androidx.compose.foundation.pager.PagerStateKt' type=androidx.compose.foundation.pager.PagerState origin=null
+              initialPage: CONST Int type=kotlin.Int value=1
+              initialPageOffsetFraction: COMPOSITE type=kotlin.Float origin=DEFAULT_VALUE
+                CONST Float type=kotlin.Float value=0.0
+              pageCount: BLOCK type=kotlin.Function0<kotlin.Int> origin=null
+                BLOCK type=kotlin.Unit origin=null
+                  CALL 'public abstract fun startReplaceGroup (key: kotlin.Int): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                    $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=androidx.compose.runtime.Composer? origin=null
+                    key: CONST Int type=kotlin.Int value=2045852645
+                  CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                    composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=androidx.compose.runtime.Composer? origin=null
+                    sourceInformation: CONST String type=kotlin.String value="CC(remember):ChooseDrinkPager.kt#9igjgp"
+                VAR IR_TEMPORARY_VARIABLE name:tmp0_group type:kotlin.Function0<kotlin.Int> [val]
+                  CALL 'public final fun cache <T> (invalid: kotlin.Boolean, block: @[DisallowComposableCalls] kotlin.Function0<T of androidx.compose.runtime.ComposerKt.cache>): T of androidx.compose.runtime.ComposerKt.cache [inline] declared in androidx.compose.runtime.ComposerKt' type=kotlin.Function0<kotlin.Int> origin=null
+                    <T>: kotlin.Function0<kotlin.Int>
+                    $receiver: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=androidx.compose.runtime.Composer? origin=null
+                    invalid: CALL 'public abstract fun changed (value: kotlin.Any?): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                      $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=androidx.compose.runtime.Composer? origin=null
+                      value: GET_VAR 'val drinks: kotlin.collections.List<com.menna.caffeine.component.DrinkItem> [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=kotlin.collections.List<com.menna.caffeine.component.DrinkItem> origin=null
+                    block: BLOCK type=kotlin.Function0<kotlin.Function0<kotlin.Int>> origin=LAMBDA
+                      COMPOSITE type=kotlin.Unit origin=null
+                      FUNCTION_REFERENCE 'private final fun ChooseDrinkPager$lambda$1 ($drinks: kotlin.collections.List<com.menna.caffeine.component.DrinkItem>): kotlin.Function0<kotlin.Int> declared in com.menna.caffeine.component.ChooseDrinkPagerKt' type=kotlin.Function0<kotlin.Function0<kotlin.Int>> origin=INLINE_LAMBDA reflectionTarget=null
+                        $drinks: GET_VAR 'val drinks: kotlin.collections.List<com.menna.caffeine.component.DrinkItem> [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=kotlin.collections.List<com.menna.caffeine.component.DrinkItem> origin=null
+                CALL 'public abstract fun endReplaceGroup (): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                  $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=androidx.compose.runtime.Composer? origin=null
+                GET_VAR 'val tmp0_group: kotlin.Function0<kotlin.Int> [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=kotlin.Function0<kotlin.Int> origin=null
+              $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=androidx.compose.runtime.Composer? origin=null
+              $changed: CONST Int type=kotlin.Int value=6
+              $default: CONST Int type=kotlin.Int value=2
+          CALL 'public final fun Column (modifier: androidx.compose.ui.Modifier?, verticalArrangement: androidx.compose.foundation.layout.Arrangement.Vertical?, horizontalAlignment: androidx.compose.ui.Alignment.Horizontal?, content: @[ExtensionFunctionType] kotlin.Function3<androidx.compose.foundation.layout.ColumnScope, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit>, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $default: kotlin.Int): kotlin.Unit [inline] declared in androidx.compose.foundation.layout.ColumnKt' type=kotlin.Unit origin=null
+            modifier: CALL 'public final fun fillMaxWidth$default (fraction: kotlin.Float, $mask0: kotlin.Int, $handler: kotlin.Any?): androidx.compose.ui.Modifier declared in androidx.compose.foundation.layout.SizeKt' type=androidx.compose.ui.Modifier origin=DEFAULT_DISPATCH_CALL
+              $receiver: TYPE_OP type=androidx.compose.ui.Modifier origin=IMPLICIT_CAST typeOperand=androidx.compose.ui.Modifier
+                GET_VAR 'modifier: androidx.compose.ui.Modifier? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=androidx.compose.ui.Modifier? origin=null
+              fraction: COMPOSITE type=kotlin.Float origin=DEFAULT_VALUE
+                CONST Float type=kotlin.Float value=0.0
+              $mask0: CONST Int type=kotlin.Int value=1
+              $handler: CONST Null type=kotlin.Any? value=null
+            verticalArrangement: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+              CONST Null type=kotlin.Nothing? value=null
+            horizontalAlignment: CALL 'public final fun <get-CenterHorizontally> (): androidx.compose.ui.Alignment.Horizontal declared in androidx.compose.ui.Alignment.Companion' type=androidx.compose.ui.Alignment.Horizontal origin=GET_PROPERTY
+              $this: GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:Companion type:androidx.compose.ui.Alignment.Companion visibility:public [final,static] declared in androidx.compose.ui.Alignment' type=androidx.compose.ui.Alignment.Companion origin=null
+            content: BLOCK type=@[ExtensionFunctionType] kotlin.Function3<androidx.compose.foundation.layout.ColumnScope, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> origin=LAMBDA
+              COMPOSITE type=kotlin.Unit origin=null
+              FUNCTION_REFERENCE 'private final fun ChooseDrinkPager$lambda$2 ($pagerState: androidx.compose.foundation.pager.PagerState, $drinks: kotlin.collections.List<com.menna.caffeine.component.DrinkItem>, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in com.menna.caffeine.component.ChooseDrinkPagerKt' type=@[ExtensionFunctionType] kotlin.Function3<androidx.compose.foundation.layout.ColumnScope, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> origin=INLINE_LAMBDA reflectionTarget=null
+                $pagerState: GET_VAR 'val pagerState: androidx.compose.foundation.pager.PagerState [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=androidx.compose.foundation.pager.PagerState origin=null
+                $drinks: GET_VAR 'val drinks: kotlin.collections.List<com.menna.caffeine.component.DrinkItem> [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=kotlin.collections.List<com.menna.caffeine.component.DrinkItem> origin=null
+            $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=androidx.compose.runtime.Composer? origin=null
+            $changed: CONST Int type=kotlin.Int value=384
+            $default: CONST Int type=kotlin.Int value=2
+          WHEN type=kotlin.Unit origin=IF
+            BRANCH
+              if: CALL 'public final fun isTraceInProgress (): kotlin.Boolean declared in androidx.compose.runtime.ComposerKt' type=kotlin.Boolean origin=null
+              then: CALL 'public final fun traceEventEnd (): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+      BRANCH
+        if: CONST Boolean type=kotlin.Boolean value=true
+        then: CALL 'public abstract fun skipToGroupEnd (): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+          $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=androidx.compose.runtime.Composer? origin=null
+    BLOCK type=kotlin.Unit origin=null
+      BLOCK type=kotlin.Unit origin=FOLDED_SAFE_CALL
+        WHEN type=kotlin.Unit origin=FOLDED_SAFE_CALL
+          BRANCH
+            if: COMPOSITE type=kotlin.Boolean origin=null
+              VAR IR_TEMPORARY_VARIABLE name:tmp1_safe_receiver type:androidx.compose.runtime.ScopeUpdateScope? [val]
+                CALL 'public abstract fun endRestartGroup (): androidx.compose.runtime.ScopeUpdateScope? declared in androidx.compose.runtime.Composer' type=androidx.compose.runtime.ScopeUpdateScope? origin=null
+                  $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=androidx.compose.runtime.Composer? origin=null
+              CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+                $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                  arg0: GET_VAR 'val tmp1_safe_receiver: androidx.compose.runtime.ScopeUpdateScope? [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=androidx.compose.runtime.ScopeUpdateScope? origin=null
+                  arg1: CONST Null type=kotlin.Nothing? value=null
+            then: CALL 'public abstract fun updateScope (block: kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit>): kotlin.Unit declared in androidx.compose.runtime.ScopeUpdateScope' type=kotlin.Unit origin=null
+              $this: GET_VAR 'val tmp1_safe_receiver: androidx.compose.runtime.ScopeUpdateScope? [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=androidx.compose.runtime.ScopeUpdateScope? origin=null
+              block: BLOCK type=kotlin.Function2<androidx.compose.runtime.Composer?, kotlin.Int, kotlin.Unit> origin=LAMBDA
+                COMPOSITE type=kotlin.Unit origin=null
+                CALL 'public final fun <jvm-indy> <T> (dynamicCall: T of kotlin.jvm.internal.<jvm-indy>, bootstrapMethodHandle: kotlin.Any, vararg bootstrapMethodArguments: kotlin.Any): T of kotlin.jvm.internal.<jvm-indy> declared in kotlin.jvm.internal' type=kotlin.Function2<androidx.compose.runtime.Composer?, kotlin.Int, kotlin.Unit> origin=null
+                  <T>: kotlin.Function2<androidx.compose.runtime.Composer?, kotlin.Int, kotlin.Unit>
+                  dynamicCall: CALL 'public final fun invoke (p0: androidx.compose.ui.Modifier?, p1: kotlin.Int, p2: kotlin.Int): kotlin.Function2<androidx.compose.runtime.Composer?, kotlin.Int, kotlin.Unit> declared in kotlin.jvm.internal.invokeDynamic' type=kotlin.Function2<androidx.compose.runtime.Composer?, kotlin.Int, kotlin.Unit> origin=null
+                    p0: GET_VAR 'modifier: androidx.compose.ui.Modifier? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=androidx.compose.ui.Modifier? origin=null
+                    p1: GET_VAR '$changed: kotlin.Int declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=kotlin.Int origin=null
+                    p2: GET_VAR '$default: kotlin.Int declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager' type=kotlin.Int origin=null
+                  bootstrapMethodHandle: CALL 'public final fun <jvm-method-handle> (tag: kotlin.Int, owner: kotlin.String, name: kotlin.String, descriptor: kotlin.String, isInterface: kotlin.Boolean): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+                    tag: CONST Int type=kotlin.Int value=6
+                    owner: CONST String type=kotlin.String value="java/lang/invoke/LambdaMetafactory"
+                    name: CONST String type=kotlin.String value="metafactory"
+                    descriptor: CONST String type=kotlin.String value="(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;"
+                    isInterface: CONST Boolean type=kotlin.Boolean value=false
+                  bootstrapMethodArguments: VARARG type=kotlin.Array<kotlin.Any> varargElementType=kotlin.Any
+                    CALL 'public final fun <jvm-original-method-type> (method: kotlin.Any): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+                      method: RAW_FUNCTION_REFERENCE 'public abstract fun invoke (p1: P1 of kotlin.Function2, p2: P2 of kotlin.Function2): R of kotlin.Function2 [operator] declared in kotlin.Function2' type=kotlin.Any
+                    RAW_FUNCTION_REFERENCE 'private final fun ChooseDrinkPager$lambda$3 ($modifier: androidx.compose.ui.Modifier?, $$changed: kotlin.Int, $$default: kotlin.Int, $composer: androidx.compose.runtime.Composer?, $force: kotlin.Int): kotlin.Unit? declared in com.menna.caffeine.component.ChooseDrinkPagerKt' type=kotlin.Any
+                    CALL 'public final fun <jvm-original-method-type> (method: kotlin.Any): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+                      method: RAW_FUNCTION_REFERENCE 'public abstract fun invoke (p1: androidx.compose.runtime.Composer?, p2: kotlin.Int?): kotlin.Unit? [fake_override,operator] declared in kotlin.jvm.internal.invokeDynamic.<fake>' type=kotlin.Any
+          BRANCH
+            if: CONST Boolean type=kotlin.Boolean value=true
+            then: CONST Null type=kotlin.Any? value=null
+
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:48)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate$default(FunctionCodegen.kt:41)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generateMethodNode(ClassCodegen.kt:407)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generateMethod(ClassCodegen.kt:424)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generate(ClassCodegen.kt:169)
+	at org.jetbrains.kotlin.backend.jvm.FileCodegen.lower(JvmPhases.kt:39)
+	at org.jetbrains.kotlin.backend.common.phaser.PhaseFactoriesKt.createFilePhase$lambda$4(PhaseFactories.kt:71)
+	at org.jetbrains.kotlin.backend.common.phaser.PhaseBuildersKt$createSimpleNamedCompilerPhase$1.phaseBody(PhaseBuilders.kt:69)
+	at org.jetbrains.kotlin.backend.common.phaser.SimpleNamedCompilerPhase.phaseBody(CompilerPhase.kt:226)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invokeSequential(performByIrFile.kt:52)
+	... 46 more
+Caused by: java.lang.RuntimeException: Exception while generating code for:
+FUN INLINE_LAMBDA name:ChooseDrinkPager$lambda$2 visibility:private modality:FINAL <> ($receiver:androidx.compose.foundation.layout.ColumnScope, $pagerState:androidx.compose.foundation.pager.PagerState, $drinks:kotlin.collections.List<com.menna.caffeine.component.DrinkItem>, $composer:androidx.compose.runtime.Composer?, $changed:kotlin.Int) returnType:kotlin.Unit
+  annotations:
+    Composable
+    ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+  $receiver: VALUE_PARAMETER name:$this$Column type:androidx.compose.foundation.layout.ColumnScope
+  VALUE_PARAMETER BOUND_VALUE_PARAMETER name:$pagerState index:0 type:androidx.compose.foundation.pager.PagerState
+  VALUE_PARAMETER BOUND_VALUE_PARAMETER name:$drinks index:1 type:kotlin.collections.List<com.menna.caffeine.component.DrinkItem>
+  VALUE_PARAMETER name:$composer index:2 type:androidx.compose.runtime.Composer? [assignable]
+  VALUE_PARAMETER name:$changed index:3 type:kotlin.Int
+  BLOCK_BODY
+    VAR name:$i$a$-Column-ChooseDrinkPagerKt$ChooseDrinkPager$1 type:kotlin.Int [val]
+      CONST Int type=kotlin.Int value=0
+    BLOCK type=kotlin.Unit origin=null
+      CALL 'public final fun sourceInformationMarkerStart (composer: androidx.compose.runtime.Composer, key: kotlin.Int, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+        composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2' type=androidx.compose.runtime.Composer? origin=null
+        key: CONST Int type=kotlin.Int value=1411264496
+        sourceInformation: CONST String type=kotlin.String value="C57@2064L10,55@1966L297,71@2557L2287,64@2302L2542:ChooseDrinkPager.kt#az8c86"
+      COMPOSITE type=kotlin.Unit origin=null
+        BLOCK type=kotlin.Unit origin=ARGUMENTS_REORDERING_FOR_CALL
+          VAR IR_TEMPORARY_VARIABLE name:tmp0_style type:androidx.compose.ui.text.TextStyle [val]
+            CALL 'public final fun <get-headlineSmall> (): androidx.compose.ui.text.TextStyle declared in androidx.compose.material3.Typography' type=androidx.compose.ui.text.TextStyle origin=GET_PROPERTY
+              $this: CALL 'public final fun <get-typography> ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): androidx.compose.material3.Typography declared in androidx.compose.material3.MaterialTheme' type=androidx.compose.material3.Typography origin=GET_PROPERTY
+                $this: GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:INSTANCE type:androidx.compose.material3.MaterialTheme visibility:public [final,static] declared in androidx.compose.material3.MaterialTheme' type=androidx.compose.material3.MaterialTheme origin=null
+                $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2' type=androidx.compose.runtime.Composer? origin=null
+                $changed: GET_FIELD 'FIELD name:$stable type:kotlin.Int visibility:public [final,static] declared in androidx.compose.material3.MaterialTheme' type=kotlin.Int origin=null
+          VAR IR_TEMPORARY_VARIABLE name:tmp1_fontWeight type:androidx.compose.ui.text.font.FontWeight [val]
+            CALL 'public final fun <get-Medium> (): androidx.compose.ui.text.font.FontWeight declared in androidx.compose.ui.text.font.FontWeight.Companion' type=androidx.compose.ui.text.font.FontWeight origin=GET_PROPERTY
+              $this: GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:Companion type:androidx.compose.ui.text.font.FontWeight.Companion visibility:public [final,static] declared in androidx.compose.ui.text.font.FontWeight' type=androidx.compose.ui.text.font.FontWeight.Companion origin=null
+          VAR IR_TEMPORARY_VARIABLE name:tmp2_textAlign type:androidx.compose.ui.text.style.TextAlign [val]
+            CALL 'public final fun getCenter-e0LSkKk (): androidx.compose.ui.text.style.TextAlign declared in androidx.compose.ui.text.style.TextAlign.Companion' type=androidx.compose.ui.text.style.TextAlign origin=GET_PROPERTY
+              $this: GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:Companion type:androidx.compose.ui.text.style.TextAlign.Companion visibility:public [final,static] declared in androidx.compose.ui.text.style.TextAlign' type=androidx.compose.ui.text.style.TextAlign.Companion origin=null
+          VAR IR_TEMPORARY_VARIABLE name:tmp3_modifier type:androidx.compose.ui.Modifier [val]
+            CALL 'public final fun padding-VpY3zN4 (horizontal: androidx.compose.ui.unit.Dp, vertical: androidx.compose.ui.unit.Dp): androidx.compose.ui.Modifier declared in androidx.compose.foundation.layout.PaddingKt' type=androidx.compose.ui.Modifier origin=null
+              $receiver: GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:Companion type:androidx.compose.ui.Modifier.Companion visibility:public [final,static] declared in androidx.compose.ui.Modifier' type=androidx.compose.ui.Modifier.Companion origin=null
+              horizontal: CALL 'public final fun <get-dp> (): androidx.compose.ui.unit.Dp [inline] declared in androidx.compose.ui.unit.DpKt' type=androidx.compose.ui.unit.Dp origin=GET_PROPERTY
+                $receiver: CONST Int type=kotlin.Int value=16
+              vertical: CALL 'public final fun <get-dp> (): androidx.compose.ui.unit.Dp [inline] declared in androidx.compose.ui.unit.DpKt' type=androidx.compose.ui.unit.Dp origin=GET_PROPERTY
+                $receiver: CONST Int type=kotlin.Int value=16
+          CALL 'public final fun Text--4IGK_g (text: kotlin.String, modifier: androidx.compose.ui.Modifier?, color: androidx.compose.ui.graphics.Color, fontSize: androidx.compose.ui.unit.TextUnit, fontStyle: androidx.compose.ui.text.font.FontStyle?, fontWeight: androidx.compose.ui.text.font.FontWeight?, fontFamily: androidx.compose.ui.text.font.FontFamily?, letterSpacing: androidx.compose.ui.unit.TextUnit, textDecoration: androidx.compose.ui.text.style.TextDecoration?, textAlign: androidx.compose.ui.text.style.TextAlign?, lineHeight: androidx.compose.ui.unit.TextUnit, overflow: androidx.compose.ui.text.style.TextOverflow, softWrap: kotlin.Boolean, maxLines: kotlin.Int, minLines: kotlin.Int, onTextLayout: kotlin.Function1<androidx.compose.ui.text.TextLayoutResult, kotlin.Unit>?, style: androidx.compose.ui.text.TextStyle?, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $changed1: kotlin.Int, $default: kotlin.Int): kotlin.Unit declared in androidx.compose.material3.TextKt' type=kotlin.Unit origin=null
+            text: CONST String type=kotlin.String value="What would you like to drink today?"
+            modifier: GET_VAR 'val tmp3_modifier: androidx.compose.ui.Modifier [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2' type=androidx.compose.ui.Modifier origin=null
+            color: COMPOSITE type=androidx.compose.ui.graphics.Color origin=DEFAULT_VALUE
+              CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.graphics.Color origin=null
+                <T>: kotlin.Long
+                <R>: androidx.compose.ui.graphics.Color
+                v: CONST Long type=kotlin.Long value=0
+            fontSize: COMPOSITE type=androidx.compose.ui.unit.TextUnit origin=DEFAULT_VALUE
+              CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.unit.TextUnit origin=null
+                <T>: kotlin.Long
+                <R>: androidx.compose.ui.unit.TextUnit
+                v: CONST Long type=kotlin.Long value=0
+            fontStyle: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+              CONST Null type=kotlin.Nothing? value=null
+            fontWeight: GET_VAR 'val tmp1_fontWeight: androidx.compose.ui.text.font.FontWeight [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2' type=androidx.compose.ui.text.font.FontWeight origin=null
+            fontFamily: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+              CONST Null type=kotlin.Nothing? value=null
+            letterSpacing: COMPOSITE type=androidx.compose.ui.unit.TextUnit origin=DEFAULT_VALUE
+              CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.unit.TextUnit origin=null
+                <T>: kotlin.Long
+                <R>: androidx.compose.ui.unit.TextUnit
+                v: CONST Long type=kotlin.Long value=0
+            textDecoration: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+              CONST Null type=kotlin.Nothing? value=null
+            textAlign: GET_VAR 'val tmp2_textAlign: androidx.compose.ui.text.style.TextAlign [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2' type=androidx.compose.ui.text.style.TextAlign origin=null
+            lineHeight: COMPOSITE type=androidx.compose.ui.unit.TextUnit origin=DEFAULT_VALUE
+              CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.unit.TextUnit origin=null
+                <T>: kotlin.Long
+                <R>: androidx.compose.ui.unit.TextUnit
+                v: CONST Long type=kotlin.Long value=0
+            overflow: COMPOSITE type=androidx.compose.ui.text.style.TextOverflow origin=DEFAULT_VALUE
+              CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.text.style.TextOverflow origin=null
+                <T>: kotlin.Int
+                <R>: androidx.compose.ui.text.style.TextOverflow
+                v: CONST Int type=kotlin.Int value=0
+            softWrap: COMPOSITE type=kotlin.Boolean origin=DEFAULT_VALUE
+              CONST Boolean type=kotlin.Boolean value=false
+            maxLines: COMPOSITE type=kotlin.Int origin=DEFAULT_VALUE
+              CONST Int type=kotlin.Int value=0
+            minLines: COMPOSITE type=kotlin.Int origin=DEFAULT_VALUE
+              CONST Int type=kotlin.Int value=0
+            onTextLayout: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+              CONST Null type=kotlin.Nothing? value=null
+            style: GET_VAR 'val tmp0_style: androidx.compose.ui.text.TextStyle [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2' type=androidx.compose.ui.text.TextStyle origin=null
+            $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2' type=androidx.compose.runtime.Composer? origin=null
+            $changed: CONST Int type=kotlin.Int value=196662
+            $changed1: CONST Int type=kotlin.Int value=0
+            $default: CONST Int type=kotlin.Int value=64988
+        CALL 'public final fun HorizontalPager--8jOkeI (state: androidx.compose.foundation.pager.PagerState, modifier: androidx.compose.ui.Modifier?, contentPadding: androidx.compose.foundation.layout.PaddingValues?, pageSize: androidx.compose.foundation.pager.PageSize?, beyondViewportPageCount: kotlin.Int, pageSpacing: androidx.compose.ui.unit.Dp, verticalAlignment: androidx.compose.ui.Alignment.Vertical?, flingBehavior: androidx.compose.foundation.gestures.TargetedFlingBehavior?, userScrollEnabled: kotlin.Boolean, reverseLayout: kotlin.Boolean, key: kotlin.Function1<@[ParameterName(name = "index")] kotlin.Int, kotlin.Any>?, pageNestedScrollConnection: androidx.compose.ui.input.nestedscroll.NestedScrollConnection?, snapPosition: androidx.compose.foundation.gestures.snapping.SnapPosition?, overscrollEffect: androidx.compose.foundation.OverscrollEffect?, pageContent: @[ExtensionFunctionType] kotlin.Function4<androidx.compose.foundation.pager.PagerScope, @[ParameterName(name = "page")] kotlin.Int, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit>, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $changed1: kotlin.Int, $default: kotlin.Int): kotlin.Unit declared in androidx.compose.foundation.pager.PagerKt' type=kotlin.Unit origin=null
+          state: GET_VAR '$pagerState: androidx.compose.foundation.pager.PagerState declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2' type=androidx.compose.foundation.pager.PagerState origin=null
+          modifier: CALL 'public final fun height-3ABfNKs (height: androidx.compose.ui.unit.Dp): androidx.compose.ui.Modifier declared in androidx.compose.foundation.layout.SizeKt' type=androidx.compose.ui.Modifier origin=null
+            $receiver: CALL 'public final fun fillMaxWidth$default (fraction: kotlin.Float, $mask0: kotlin.Int, $handler: kotlin.Any?): androidx.compose.ui.Modifier declared in androidx.compose.foundation.layout.SizeKt' type=androidx.compose.ui.Modifier origin=DEFAULT_DISPATCH_CALL
+              $receiver: GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:Companion type:androidx.compose.ui.Modifier.Companion visibility:public [final,static] declared in androidx.compose.ui.Modifier' type=androidx.compose.ui.Modifier.Companion origin=null
+              fraction: COMPOSITE type=kotlin.Float origin=DEFAULT_VALUE
+                CONST Float type=kotlin.Float value=0.0
+              $mask0: CONST Int type=kotlin.Int value=1
+              $handler: CONST Null type=kotlin.Any? value=null
+            height: CALL 'public final fun <get-dp> (): androidx.compose.ui.unit.Dp [inline] declared in androidx.compose.ui.unit.DpKt' type=androidx.compose.ui.unit.Dp origin=GET_PROPERTY
+              $receiver: CONST Int type=kotlin.Int value=300
+          contentPadding: CALL 'public final fun PaddingValues-YgX7TsA$default (horizontal: androidx.compose.ui.unit.Dp, vertical: androidx.compose.ui.unit.Dp, $mask0: kotlin.Int, $handler: kotlin.Any?): androidx.compose.foundation.layout.PaddingValues declared in androidx.compose.foundation.layout.PaddingKt' type=androidx.compose.foundation.layout.PaddingValues origin=DEFAULT_DISPATCH_CALL
+            horizontal: CALL 'public final fun <get-dp> (): androidx.compose.ui.unit.Dp [inline] declared in androidx.compose.ui.unit.DpKt' type=androidx.compose.ui.unit.Dp origin=GET_PROPERTY
+              $receiver: CONST Int type=kotlin.Int value=80
+            vertical: COMPOSITE type=androidx.compose.ui.unit.Dp origin=DEFAULT_VALUE
+              CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.unit.Dp origin=null
+                <T>: kotlin.Float
+                <R>: androidx.compose.ui.unit.Dp
+                v: CONST Float type=kotlin.Float value=0.0
+            $mask0: CONST Int type=kotlin.Int value=2
+            $handler: CONST Null type=kotlin.Any? value=null
+          pageSize: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+            CONST Null type=kotlin.Nothing? value=null
+          beyondViewportPageCount: COMPOSITE type=kotlin.Int origin=DEFAULT_VALUE
+            CONST Int type=kotlin.Int value=0
+          pageSpacing: CALL 'public final fun <get-dp> (): androidx.compose.ui.unit.Dp [inline] declared in androidx.compose.ui.unit.DpKt' type=androidx.compose.ui.unit.Dp origin=GET_PROPERTY
+            $receiver: CONST Int type=kotlin.Int value=-40
+          verticalAlignment: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+            CONST Null type=kotlin.Nothing? value=null
+          flingBehavior: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+            CONST Null type=kotlin.Nothing? value=null
+          userScrollEnabled: COMPOSITE type=kotlin.Boolean origin=DEFAULT_VALUE
+            CONST Boolean type=kotlin.Boolean value=false
+          reverseLayout: COMPOSITE type=kotlin.Boolean origin=DEFAULT_VALUE
+            CONST Boolean type=kotlin.Boolean value=false
+          key: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+            CONST Null type=kotlin.Nothing? value=null
+          pageNestedScrollConnection: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+            CONST Null type=kotlin.Nothing? value=null
+          snapPosition: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+            CONST Null type=kotlin.Nothing? value=null
+          overscrollEffect: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+            CONST Null type=kotlin.Nothing? value=null
+          pageContent: CALL 'public final fun rememberComposableLambda (key: kotlin.Int, tracked: kotlin.Boolean, block: kotlin.Any, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): androidx.compose.runtime.internal.ComposableLambda declared in androidx.compose.runtime.internal.ComposableLambdaKt' type=androidx.compose.runtime.internal.ComposableLambda origin=null
+            key: CONST Int type=kotlin.Int value=-835192944
+            tracked: CONST Boolean type=kotlin.Boolean value=true
+            block: BLOCK type=com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided> origin=null
+              CLASS LAMBDA_IMPL CLASS name:<no name provided> modality:FINAL visibility:public/*package*/ superTypes:[kotlin.Any; kotlin.Function4<androidx.compose.foundation.pager.PagerScope, kotlin.Int, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit>]
+                $this: VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>
+                CONSTRUCTOR GENERATED_MEMBER_IN_CALLABLE_REFERENCE visibility:public/*package*/ <> ($pagerState:androidx.compose.foundation.pager.PagerState, $drinks:kotlin.collections.List<com.menna.caffeine.component.DrinkItem>) returnType:com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided> [primary]
+                  VALUE_PARAMETER BOUND_VALUE_PARAMETER name:$pagerState index:0 type:androidx.compose.foundation.pager.PagerState
+                  VALUE_PARAMETER BOUND_VALUE_PARAMETER name:$drinks index:1 type:kotlin.collections.List<com.menna.caffeine.component.DrinkItem>
+                  BLOCK_BODY
+                    SET_FIELD 'FIELD FIELD_FOR_CAPTURED_VALUE name:$pagerState type:androidx.compose.foundation.pager.PagerState visibility:public/*package*/ [final] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>' type=kotlin.Unit origin=INITIALIZER_OF_FIELD_FOR_CAPTURED_VALUE
+                      receiver: GET_VAR '<this>: com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided> declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>' type=com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided> origin=null
+                      value: GET_VAR '$pagerState: androidx.compose.foundation.pager.PagerState declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.<init>' type=androidx.compose.foundation.pager.PagerState origin=null
+                    SET_FIELD 'FIELD FIELD_FOR_CAPTURED_VALUE name:$drinks type:kotlin.collections.List<com.menna.caffeine.component.DrinkItem> visibility:public/*package*/ [final] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>' type=kotlin.Unit origin=INITIALIZER_OF_FIELD_FOR_CAPTURED_VALUE
+                      receiver: GET_VAR '<this>: com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided> declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>' type=com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided> origin=null
+                      value: GET_VAR '$drinks: kotlin.collections.List<com.menna.caffeine.component.DrinkItem> declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.<init>' type=kotlin.collections.List<com.menna.caffeine.component.DrinkItem> origin=null
+                    DELEGATING_CONSTRUCTOR_CALL 'public constructor <init> () [primary] declared in kotlin.Any'
+                    BLOCK type=kotlin.Unit origin=null
+                FUN name:invoke visibility:public modality:FINAL <> ($this:com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>, $this$HorizontalPager:androidx.compose.foundation.pager.PagerScope, page:kotlin.Int, $composer:androidx.compose.runtime.Composer?, $changed:kotlin.Int) returnType:kotlin.Unit
+                  annotations:
+                    Composable
+                    ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+                  overridden:
+                    public abstract fun invoke (p1: P1 of kotlin.Function4, p2: P2 of kotlin.Function4, p3: P3 of kotlin.Function4, p4: P4 of kotlin.Function4): R of kotlin.Function4 [operator] declared in kotlin.Function4
+                  $this: VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>
+                  VALUE_PARAMETER name:$this$HorizontalPager index:0 type:androidx.compose.foundation.pager.PagerScope
+                  VALUE_PARAMETER name:page index:1 type:kotlin.Int
+                  VALUE_PARAMETER name:$composer index:2 type:androidx.compose.runtime.Composer? [assignable]
+                  VALUE_PARAMETER name:$changed index:3 type:kotlin.Int
+                  BLOCK_BODY
+                    CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                      composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke' type=androidx.compose.runtime.Composer? origin=null
+                      sourceInformation: CONST String type=kotlin.String value="C81@2978L914,76@2738L2096:ChooseDrinkPager.kt#az8c86"
+                    COMPOSITE type=kotlin.Unit origin=null
+                      WHEN type=kotlin.Unit origin=IF
+                        BRANCH
+                          if: CALL 'public final fun isTraceInProgress (): kotlin.Boolean declared in androidx.compose.runtime.ComposerKt' type=kotlin.Boolean origin=null
+                          then: CALL 'public final fun traceEventStart (key: kotlin.Int, dirty1: kotlin.Int, dirty2: kotlin.Int, info: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                            key: CONST Int type=kotlin.Int value=-835192944
+                            dirty1: GET_VAR '$changed: kotlin.Int declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke' type=kotlin.Int origin=null
+                            dirty2: CONST Int type=kotlin.Int value=-1
+                            info: CONST String type=kotlin.String value="com.menna.caffeine.component.ChooseDrinkPager.<anonymous>.<anonymous> (ChooseDrinkPager.kt:72)"
+                      VAR name:pageOffset type:kotlin.Float [val]
+                        CALL 'public final fun <get-absoluteValue> (): kotlin.Float [inline] declared in kotlin.math.MathKt' type=kotlin.Float origin=GET_PROPERTY
+                          $receiver: CALL 'public final fun plus (other: kotlin.Float): kotlin.Float [operator] declared in kotlin.Int' type=kotlin.Float origin=PLUS
+                            $this: CALL 'public final fun minus (other: kotlin.Int): kotlin.Int [operator] declared in kotlin.Int' type=kotlin.Int origin=MINUS
+                              $this: CALL 'public final fun <get-currentPage> (): kotlin.Int declared in androidx.compose.foundation.pager.PagerState' type=kotlin.Int origin=GET_PROPERTY
+                                $this: GET_FIELD 'FIELD FIELD_FOR_CAPTURED_VALUE name:$pagerState type:androidx.compose.foundation.pager.PagerState visibility:public/*package*/ [final] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>' type=androidx.compose.foundation.pager.PagerState origin=null
+                                  receiver: GET_VAR '<this>: com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided> declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke' type=com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided> origin=null
+                              other: GET_VAR 'page: kotlin.Int declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke' type=kotlin.Int origin=null
+                            other: CALL 'public final fun <get-currentPageOffsetFraction> (): kotlin.Float declared in androidx.compose.foundation.pager.PagerState' type=kotlin.Float origin=GET_PROPERTY
+                              $this: GET_FIELD 'FIELD FIELD_FOR_CAPTURED_VALUE name:$pagerState type:androidx.compose.foundation.pager.PagerState visibility:public/*package*/ [final] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>' type=androidx.compose.foundation.pager.PagerState origin=null
+                                receiver: GET_VAR '<this>: com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided> declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke' type=com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided> origin=null
+                      BLOCK type=kotlin.Unit origin=ARGUMENTS_REORDERING_FOR_CALL
+                        VAR IR_TEMPORARY_VARIABLE name:tmp0_horizontalAlignment type:androidx.compose.ui.Alignment.Horizontal [val]
+                          CALL 'public final fun <get-CenterHorizontally> (): androidx.compose.ui.Alignment.Horizontal declared in androidx.compose.ui.Alignment.Companion' type=androidx.compose.ui.Alignment.Horizontal origin=GET_PROPERTY
+                            $this: GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:Companion type:androidx.compose.ui.Alignment.Companion visibility:public [final,static] declared in androidx.compose.ui.Alignment' type=androidx.compose.ui.Alignment.Companion origin=null
+                        VAR IR_TEMPORARY_VARIABLE name:tmp1_verticalArrangement type:androidx.compose.foundation.layout.Arrangement.HorizontalOrVertical [val]
+                          CALL 'public final fun <get-Center> (): androidx.compose.foundation.layout.Arrangement.HorizontalOrVertical declared in androidx.compose.foundation.layout.Arrangement' type=androidx.compose.foundation.layout.Arrangement.HorizontalOrVertical origin=GET_PROPERTY
+                            $this: GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:INSTANCE type:androidx.compose.foundation.layout.Arrangement visibility:public [final,static] declared in androidx.compose.foundation.layout.Arrangement' type=androidx.compose.foundation.layout.Arrangement origin=null
+                        VAR IR_TEMPORARY_VARIABLE name:tmp2_modifier type:androidx.compose.ui.Modifier [val]
+                          CALL 'public final fun graphicsLayer (block: @[ExtensionFunctionType] kotlin.Function1<androidx.compose.ui.graphics.GraphicsLayerScope, kotlin.Unit>): androidx.compose.ui.Modifier declared in androidx.compose.ui.graphics.GraphicsLayerModifierKt' type=androidx.compose.ui.Modifier origin=null
+                            $receiver: CALL 'public final fun fillMaxSize$default (fraction: kotlin.Float, $mask0: kotlin.Int, $handler: kotlin.Any?): androidx.compose.ui.Modifier declared in androidx.compose.foundation.layout.SizeKt' type=androidx.compose.ui.Modifier origin=DEFAULT_DISPATCH_CALL
+                              $receiver: GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:Companion type:androidx.compose.ui.Modifier.Companion visibility:public [final,static] declared in androidx.compose.ui.Modifier' type=androidx.compose.ui.Modifier.Companion origin=null
+                              fraction: COMPOSITE type=kotlin.Float origin=DEFAULT_VALUE
+                                CONST Float type=kotlin.Float value=0.0
+                              $mask0: CONST Int type=kotlin.Int value=1
+                              $handler: CONST Null type=kotlin.Any? value=null
+                            block: BLOCK type=@[ExtensionFunctionType] kotlin.Function1<androidx.compose.ui.graphics.GraphicsLayerScope, kotlin.Unit> origin=null
+                              BLOCK type=kotlin.Unit origin=null
+                                CALL 'public abstract fun startReplaceGroup (key: kotlin.Int): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                                  $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke' type=androidx.compose.runtime.Composer? origin=null
+                                  key: CONST Int type=kotlin.Int value=56479686
+                                CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                                  composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke' type=androidx.compose.runtime.Composer? origin=null
+                                  sourceInformation: CONST String type=kotlin.String value="CC(remember):ChooseDrinkPager.kt#9igjgp"
+                              VAR IR_TEMPORARY_VARIABLE name:tmp0_group type:@[ExtensionFunctionType] kotlin.Function1<androidx.compose.ui.graphics.GraphicsLayerScope, kotlin.Unit> [val]
+                                CALL 'public final fun cache <T> (invalid: kotlin.Boolean, block: @[DisallowComposableCalls] kotlin.Function0<T of androidx.compose.runtime.ComposerKt.cache>): T of androidx.compose.runtime.ComposerKt.cache [inline] declared in androidx.compose.runtime.ComposerKt' type=@[ExtensionFunctionType] kotlin.Function1<androidx.compose.ui.graphics.GraphicsLayerScope, kotlin.Unit> origin=null
+                                  <T>: @[ExtensionFunctionType] kotlin.Function1<androidx.compose.ui.graphics.GraphicsLayerScope, kotlin.Unit>
+                                  $receiver: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke' type=androidx.compose.runtime.Composer? origin=null
+                                  invalid: CALL 'public open fun changed (value: kotlin.Float): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                                    $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke' type=androidx.compose.runtime.Composer? origin=null
+                                    value: GET_VAR 'val pageOffset: kotlin.Float [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke' type=kotlin.Float origin=null
+                                  block: BLOCK type=kotlin.Function0<@[ExtensionFunctionType] kotlin.Function1<androidx.compose.ui.graphics.GraphicsLayerScope, kotlin.Unit>> origin=LAMBDA
+                                    COMPOSITE type=kotlin.Unit origin=null
+                                    FUNCTION_REFERENCE 'private final fun invoke$lambda$1 ($pageOffset: kotlin.Float): @[ExtensionFunctionType] kotlin.Function1<androidx.compose.ui.graphics.GraphicsLayerScope, kotlin.Unit> declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>' type=kotlin.Function0<@[ExtensionFunctionType] kotlin.Function1<androidx.compose.ui.graphics.GraphicsLayerScope, kotlin.Unit>> origin=INLINE_LAMBDA reflectionTarget=null
+                                      $pageOffset: GET_VAR 'val pageOffset: kotlin.Float [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke' type=kotlin.Float origin=null
+                              CALL 'public abstract fun endReplaceGroup (): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                                $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke' type=androidx.compose.runtime.Composer? origin=null
+                              GET_VAR 'val tmp0_group: @[ExtensionFunctionType] kotlin.Function1<androidx.compose.ui.graphics.GraphicsLayerScope, kotlin.Unit> [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke' type=@[ExtensionFunctionType] kotlin.Function1<androidx.compose.ui.graphics.GraphicsLayerScope, kotlin.Unit> origin=null
+                        CALL 'public final fun Column (modifier: androidx.compose.ui.Modifier?, verticalArrangement: androidx.compose.foundation.layout.Arrangement.Vertical?, horizontalAlignment: androidx.compose.ui.Alignment.Horizontal?, content: @[ExtensionFunctionType] kotlin.Function3<androidx.compose.foundation.layout.ColumnScope, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit>, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $default: kotlin.Int): kotlin.Unit [inline] declared in androidx.compose.foundation.layout.ColumnKt' type=kotlin.Unit origin=null
+                          modifier: GET_VAR 'val tmp2_modifier: androidx.compose.ui.Modifier [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke' type=androidx.compose.ui.Modifier origin=null
+                          verticalArrangement: GET_VAR 'val tmp1_verticalArrangement: androidx.compose.foundation.layout.Arrangement.HorizontalOrVertical [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke' type=androidx.compose.foundation.layout.Arrangement.HorizontalOrVertical origin=null
+                          horizontalAlignment: GET_VAR 'val tmp0_horizontalAlignment: androidx.compose.ui.Alignment.Horizontal [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke' type=androidx.compose.ui.Alignment.Horizontal origin=null
+                          content: BLOCK type=@[ExtensionFunctionType] kotlin.Function3<androidx.compose.foundation.layout.ColumnScope, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> origin=LAMBDA
+                            COMPOSITE type=kotlin.Unit origin=null
+                            FUNCTION_REFERENCE 'private final fun invoke$lambda$3 ($drinks: kotlin.collections.List<com.menna.caffeine.component.DrinkItem>, $page: kotlin.Int, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>' type=@[ExtensionFunctionType] kotlin.Function3<androidx.compose.foundation.layout.ColumnScope, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> origin=INLINE_LAMBDA reflectionTarget=null
+                              $drinks: GET_FIELD 'FIELD FIELD_FOR_CAPTURED_VALUE name:$drinks type:kotlin.collections.List<com.menna.caffeine.component.DrinkItem> visibility:public/*package*/ [final] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>' type=kotlin.collections.List<com.menna.caffeine.component.DrinkItem> origin=null
+                                receiver: GET_VAR '<this>: com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided> declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke' type=com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided> origin=null
+                              $page: GET_VAR 'page: kotlin.Int declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke' type=kotlin.Int origin=null
+                          $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke' type=androidx.compose.runtime.Composer? origin=null
+                          $changed: CONST Int type=kotlin.Int value=432
+                          $default: CONST Int type=kotlin.Int value=0
+                      WHEN type=kotlin.Unit origin=IF
+                        BRANCH
+                          if: CALL 'public final fun isTraceInProgress (): kotlin.Boolean declared in androidx.compose.runtime.ComposerKt' type=kotlin.Boolean origin=null
+                          then: CALL 'public final fun traceEventEnd (): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                FIELD FIELD_FOR_CAPTURED_VALUE name:$pagerState type:androidx.compose.foundation.pager.PagerState visibility:public/*package*/ [final]
+                FIELD FIELD_FOR_CAPTURED_VALUE name:$drinks type:kotlin.collections.List<com.menna.caffeine.component.DrinkItem> visibility:public/*package*/ [final]
+                FUN LOCAL_FUNCTION_FOR_LAMBDA name:invoke$lambda$1$lambda$0 visibility:private modality:FINAL <> ($pageOffset:kotlin.Float, $this$graphicsLayer:androidx.compose.ui.graphics.GraphicsLayerScope) returnType:kotlin.Unit?
+                  VALUE_PARAMETER BOUND_VALUE_PARAMETER name:$pageOffset index:0 type:kotlin.Float
+                  VALUE_PARAMETER name:$this$graphicsLayer index:1 type:androidx.compose.ui.graphics.GraphicsLayerScope
+                  BLOCK_BODY
+                    VAR name:scale type:kotlin.Float [val]
+                      CALL 'public final fun lerp (start: kotlin.Float, stop: kotlin.Float, fraction: kotlin.Float): kotlin.Float declared in androidx.compose.ui.util.MathHelpersKt' type=kotlin.Float origin=null
+                        start: CONST Float type=kotlin.Float value=0.6
+                        stop: CONST Float type=kotlin.Float value=1.0
+                        fraction: CALL 'public final fun minus (other: kotlin.Float): kotlin.Float [operator] declared in kotlin.Float' type=kotlin.Float origin=MINUS
+                          $this: CONST Float type=kotlin.Float value=1.0
+                          other: CALL 'public final fun coerceIn (minimumValue: kotlin.Float, maximumValue: kotlin.Float): kotlin.Float declared in kotlin.ranges.RangesKt' type=kotlin.Float origin=null
+                            $receiver: GET_VAR '$pageOffset: kotlin.Float declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$1$lambda$0' type=kotlin.Float origin=null
+                            minimumValue: CONST Float type=kotlin.Float value=0.0
+                            maximumValue: CONST Float type=kotlin.Float value=1.0
+                    CALL 'public abstract fun <set-scaleX> (<set-?>: kotlin.Float): kotlin.Unit declared in androidx.compose.ui.graphics.GraphicsLayerScope' type=kotlin.Unit origin=EQ
+                      $this: GET_VAR '$this$graphicsLayer: androidx.compose.ui.graphics.GraphicsLayerScope declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$1$lambda$0' type=androidx.compose.ui.graphics.GraphicsLayerScope origin=null
+                      <set-?>: GET_VAR 'val scale: kotlin.Float [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$1$lambda$0' type=kotlin.Float origin=null
+                    CALL 'public abstract fun <set-scaleY> (<set-?>: kotlin.Float): kotlin.Unit declared in androidx.compose.ui.graphics.GraphicsLayerScope' type=kotlin.Unit origin=EQ
+                      $this: GET_VAR '$this$graphicsLayer: androidx.compose.ui.graphics.GraphicsLayerScope declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$1$lambda$0' type=androidx.compose.ui.graphics.GraphicsLayerScope origin=null
+                      <set-?>: GET_VAR 'val scale: kotlin.Float [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$1$lambda$0' type=kotlin.Float origin=null
+                    CALL 'public abstract fun <set-alpha> (<set-?>: kotlin.Float): kotlin.Unit declared in androidx.compose.ui.graphics.GraphicsLayerScope' type=kotlin.Unit origin=EQ
+                      $this: GET_VAR '$this$graphicsLayer: androidx.compose.ui.graphics.GraphicsLayerScope declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$1$lambda$0' type=androidx.compose.ui.graphics.GraphicsLayerScope origin=null
+                      <set-?>: CALL 'public final fun lerp (start: kotlin.Float, stop: kotlin.Float, fraction: kotlin.Float): kotlin.Float declared in androidx.compose.ui.util.MathHelpersKt' type=kotlin.Float origin=null
+                        start: CONST Float type=kotlin.Float value=0.4
+                        stop: CONST Float type=kotlin.Float value=1.0
+                        fraction: CALL 'public final fun minus (other: kotlin.Float): kotlin.Float [operator] declared in kotlin.Float' type=kotlin.Float origin=MINUS
+                          $this: CONST Float type=kotlin.Float value=1.0
+                          other: CALL 'public final fun coerceIn (minimumValue: kotlin.Float, maximumValue: kotlin.Float): kotlin.Float declared in kotlin.ranges.RangesKt' type=kotlin.Float origin=null
+                            $receiver: GET_VAR '$pageOffset: kotlin.Float declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$1$lambda$0' type=kotlin.Float origin=null
+                            minimumValue: CONST Float type=kotlin.Float value=0.0
+                            maximumValue: CONST Float type=kotlin.Float value=1.0
+                    WHEN type=kotlin.Unit origin=IF
+                      BRANCH
+                        if: CALL 'public final fun less (arg0: kotlin.Float, arg1: kotlin.Float): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=LT
+                          arg0: GET_VAR '$pageOffset: kotlin.Float declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$1$lambda$0' type=kotlin.Float origin=null
+                          arg1: CONST Float type=kotlin.Float value=0.5
+                        then: BLOCK type=kotlin.Unit origin=null
+                          SET_FIELD 'FIELD IR_EXTERNAL_JAVA_DECLARATION_STUB name:translationZ type:kotlin.Int visibility:public [final,static] declared in android.R.attr' type=kotlin.Unit superQualifierSymbol=android.R.attr origin=EQ
+                            value: CONST Int type=kotlin.Int value=1
+                FUN INLINE_LAMBDA name:invoke$lambda$1 visibility:private modality:FINAL <> ($pageOffset:kotlin.Float) returnType:@[ExtensionFunctionType] kotlin.Function1<androidx.compose.ui.graphics.GraphicsLayerScope, kotlin.Unit>
+                  VALUE_PARAMETER BOUND_VALUE_PARAMETER name:$pageOffset index:0 type:kotlin.Float
+                  BLOCK_BODY
+                    VAR name:$i$a$-cache-ChooseDrinkPagerKt$ChooseDrinkPager$1$1$1 type:kotlin.Int [val]
+                      CONST Int type=kotlin.Int value=0
+                    RETURN type=kotlin.Nothing from='private final fun invoke$lambda$1 ($pageOffset: kotlin.Float): @[ExtensionFunctionType] kotlin.Function1<androidx.compose.ui.graphics.GraphicsLayerScope, kotlin.Unit> declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>'
+                      BLOCK type=@[ExtensionFunctionType] kotlin.Function1<androidx.compose.ui.graphics.GraphicsLayerScope, kotlin.Unit> origin=LAMBDA
+                        COMPOSITE type=kotlin.Unit origin=null
+                        CALL 'public final fun <jvm-indy> <T> (dynamicCall: T of kotlin.jvm.internal.<jvm-indy>, bootstrapMethodHandle: kotlin.Any, vararg bootstrapMethodArguments: kotlin.Any): T of kotlin.jvm.internal.<jvm-indy> declared in kotlin.jvm.internal' type=@[ExtensionFunctionType] kotlin.Function1<androidx.compose.ui.graphics.GraphicsLayerScope, kotlin.Unit> origin=null
+                          <T>: @[ExtensionFunctionType] kotlin.Function1<androidx.compose.ui.graphics.GraphicsLayerScope, kotlin.Unit>
+                          dynamicCall: CALL 'public final fun invoke (p0: kotlin.Float): @[ExtensionFunctionType] kotlin.Function1<androidx.compose.ui.graphics.GraphicsLayerScope, kotlin.Unit> declared in kotlin.jvm.internal.invokeDynamic' type=@[ExtensionFunctionType] kotlin.Function1<androidx.compose.ui.graphics.GraphicsLayerScope, kotlin.Unit> origin=null
+                            p0: GET_VAR '$pageOffset: kotlin.Float declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$1' type=kotlin.Float origin=null
+                          bootstrapMethodHandle: CALL 'public final fun <jvm-method-handle> (tag: kotlin.Int, owner: kotlin.String, name: kotlin.String, descriptor: kotlin.String, isInterface: kotlin.Boolean): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+                            tag: CONST Int type=kotlin.Int value=6
+                            owner: CONST String type=kotlin.String value="java/lang/invoke/LambdaMetafactory"
+                            name: CONST String type=kotlin.String value="metafactory"
+                            descriptor: CONST String type=kotlin.String value="(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;"
+                            isInterface: CONST Boolean type=kotlin.Boolean value=false
+                          bootstrapMethodArguments: VARARG type=kotlin.Array<kotlin.Any> varargElementType=kotlin.Any
+                            CALL 'public final fun <jvm-original-method-type> (method: kotlin.Any): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+                              method: RAW_FUNCTION_REFERENCE 'public abstract fun invoke (p1: P1 of kotlin.Function1): R of kotlin.Function1 [operator] declared in kotlin.Function1' type=kotlin.Any
+                            RAW_FUNCTION_REFERENCE 'private final fun invoke$lambda$1$lambda$0 ($pageOffset: kotlin.Float, $this$graphicsLayer: androidx.compose.ui.graphics.GraphicsLayerScope): kotlin.Unit? declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>' type=kotlin.Any
+                            CALL 'public final fun <jvm-original-method-type> (method: kotlin.Any): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+                              method: RAW_FUNCTION_REFERENCE 'public abstract fun invoke (p1: androidx.compose.ui.graphics.GraphicsLayerScope): kotlin.Unit? [fake_override,operator] declared in kotlin.jvm.internal.invokeDynamic.<fake>' type=kotlin.Any
+                FUN INLINE_LAMBDA name:invoke$lambda$3$lambda$2 visibility:private modality:FINAL <> ($receiver:androidx.compose.foundation.layout.BoxScope, $drinks:kotlin.collections.List<com.menna.caffeine.component.DrinkItem>, $page:kotlin.Int, $composer:androidx.compose.runtime.Composer?, $changed:kotlin.Int) returnType:kotlin.Unit
+                  annotations:
+                    Composable
+                    ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+                  $receiver: VALUE_PARAMETER name:$this$Box type:androidx.compose.foundation.layout.BoxScope
+                  VALUE_PARAMETER BOUND_VALUE_PARAMETER name:$drinks index:0 type:kotlin.collections.List<com.menna.caffeine.component.DrinkItem>
+                  VALUE_PARAMETER BOUND_VALUE_PARAMETER name:$page index:1 type:kotlin.Int
+                  VALUE_PARAMETER name:$composer index:2 type:androidx.compose.runtime.Composer? [assignable]
+                  VALUE_PARAMETER name:$changed index:3 type:kotlin.Int
+                  BLOCK_BODY
+                    VAR name:$i$a$-Box-ChooseDrinkPagerKt$ChooseDrinkPager$1$1$2$1 type:kotlin.Int [val]
+                      CONST Int type=kotlin.Int value=0
+                    BLOCK type=kotlin.Unit origin=null
+                      CALL 'public final fun sourceInformationMarkerStart (composer: androidx.compose.runtime.Composer, key: kotlin.Int, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                        composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$3$lambda$2' type=androidx.compose.runtime.Composer? origin=null
+                        key: CONST Int type=kotlin.Int value=-1160160416
+                        sourceInformation: CONST String type=kotlin.String value="C112@4222L43,111@4181L241:ChooseDrinkPager.kt#az8c86"
+                      COMPOSITE type=kotlin.Unit origin=null
+                        CALL 'public final fun Image (painter: androidx.compose.ui.graphics.painter.Painter, contentDescription: kotlin.String?, modifier: androidx.compose.ui.Modifier?, alignment: androidx.compose.ui.Alignment?, contentScale: androidx.compose.ui.layout.ContentScale?, alpha: kotlin.Float, colorFilter: androidx.compose.ui.graphics.ColorFilter?, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $default: kotlin.Int): kotlin.Unit declared in androidx.compose.foundation.ImageKt' type=kotlin.Unit origin=null
+                          painter: CALL 'public final fun painterResource (id: kotlin.Int, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): androidx.compose.ui.graphics.painter.Painter declared in androidx.compose.ui.res.PainterResources_androidKt' type=androidx.compose.ui.graphics.painter.Painter origin=null
+                            id: CALL 'public final fun <get-imageRes> (): kotlin.Int declared in com.menna.caffeine.component.DrinkItem' type=kotlin.Int origin=GET_PROPERTY
+                              $this: CALL 'public abstract fun get (index: kotlin.Int): E of kotlin.collections.List [operator] declared in kotlin.collections.List' type=com.menna.caffeine.component.DrinkItem origin=GET_ARRAY_ELEMENT
+                                $this: GET_VAR '$drinks: kotlin.collections.List<com.menna.caffeine.component.DrinkItem> declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$3$lambda$2' type=kotlin.collections.List<com.menna.caffeine.component.DrinkItem> origin=null
+                                index: GET_VAR '$page: kotlin.Int declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$3$lambda$2' type=kotlin.Int origin=null
+                            $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$3$lambda$2' type=androidx.compose.runtime.Composer? origin=null
+                            $changed: CONST Int type=kotlin.Int value=0
+                          contentDescription: STRING_CONCATENATION type=kotlin.String
+                            CALL 'public final fun <get-name> (): kotlin.String declared in com.menna.caffeine.component.DrinkItem' type=kotlin.String origin=GET_PROPERTY
+                              $this: CALL 'public abstract fun get (index: kotlin.Int): E of kotlin.collections.List [operator] declared in kotlin.collections.List' type=com.menna.caffeine.component.DrinkItem origin=GET_ARRAY_ELEMENT
+                                $this: GET_VAR '$drinks: kotlin.collections.List<com.menna.caffeine.component.DrinkItem> declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$3$lambda$2' type=kotlin.collections.List<com.menna.caffeine.component.DrinkItem> origin=null
+                                index: GET_VAR '$page: kotlin.Int declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$3$lambda$2' type=kotlin.Int origin=null
+                            CONST String type=kotlin.String value=" coffee"
+                          modifier: CALL 'public final fun fillMaxSize$default (fraction: kotlin.Float, $mask0: kotlin.Int, $handler: kotlin.Any?): androidx.compose.ui.Modifier declared in androidx.compose.foundation.layout.SizeKt' type=androidx.compose.ui.Modifier origin=DEFAULT_DISPATCH_CALL
+                            $receiver: GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:Companion type:androidx.compose.ui.Modifier.Companion visibility:public [final,static] declared in androidx.compose.ui.Modifier' type=androidx.compose.ui.Modifier.Companion origin=null
+                            fraction: COMPOSITE type=kotlin.Float origin=DEFAULT_VALUE
+                              CONST Float type=kotlin.Float value=0.0
+                            $mask0: CONST Int type=kotlin.Int value=1
+                            $handler: CONST Null type=kotlin.Any? value=null
+                          alignment: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+                            CONST Null type=kotlin.Nothing? value=null
+                          contentScale: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+                            CONST Null type=kotlin.Nothing? value=null
+                          alpha: COMPOSITE type=kotlin.Float origin=DEFAULT_VALUE
+                            CONST Float type=kotlin.Float value=0.0
+                          colorFilter: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+                            CONST Null type=kotlin.Nothing? value=null
+                          $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$3$lambda$2' type=androidx.compose.runtime.Composer? origin=null
+                          $changed: CONST Int type=kotlin.Int value=384
+                          $default: CONST Int type=kotlin.Int value=120
+                      CALL 'public final fun sourceInformationMarkerEnd (composer: androidx.compose.runtime.Composer): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                        composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$3$lambda$2' type=androidx.compose.runtime.Composer? origin=null
+                FUN INLINE_LAMBDA name:invoke$lambda$3 visibility:private modality:FINAL <> ($receiver:androidx.compose.foundation.layout.ColumnScope, $drinks:kotlin.collections.List<com.menna.caffeine.component.DrinkItem>, $page:kotlin.Int, $composer:androidx.compose.runtime.Composer?, $changed:kotlin.Int) returnType:kotlin.Unit
+                  annotations:
+                    Composable
+                    ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+                  $receiver: VALUE_PARAMETER name:$this$Column type:androidx.compose.foundation.layout.ColumnScope
+                  VALUE_PARAMETER BOUND_VALUE_PARAMETER name:$drinks index:0 type:kotlin.collections.List<com.menna.caffeine.component.DrinkItem>
+                  VALUE_PARAMETER BOUND_VALUE_PARAMETER name:$page index:1 type:kotlin.Int
+                  VALUE_PARAMETER name:$composer index:2 type:androidx.compose.runtime.Composer? [assignable]
+                  VALUE_PARAMETER name:$changed index:3 type:kotlin.Int
+                  BLOCK_BODY
+                    VAR name:$i$a$-Column-ChooseDrinkPagerKt$ChooseDrinkPager$1$1$2 type:kotlin.Int [val]
+                      CONST Int type=kotlin.Int value=0
+                    BLOCK type=kotlin.Unit origin=null
+                      CALL 'public final fun sourceInformationMarkerStart (composer: androidx.compose.runtime.Composer, key: kotlin.Int, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                        composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$3' type=androidx.compose.runtime.Composer? origin=null
+                        key: CONST Int type=kotlin.Int value=1351126869
+                        sourceInformation: CONST String type=kotlin.String value="C105@3961L479,121@4582L10,119@4488L332:ChooseDrinkPager.kt#az8c86"
+                      COMPOSITE type=kotlin.Unit origin=null
+                        CALL 'public final fun Box (modifier: androidx.compose.ui.Modifier?, contentAlignment: androidx.compose.ui.Alignment?, propagateMinConstraints: kotlin.Boolean, content: @[ExtensionFunctionType] kotlin.Function3<androidx.compose.foundation.layout.BoxScope, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit>, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $default: kotlin.Int): kotlin.Unit [inline] declared in androidx.compose.foundation.layout.BoxKt' type=kotlin.Unit origin=null
+                          modifier: CALL 'public final fun padding-3ABfNKs (all: androidx.compose.ui.unit.Dp): androidx.compose.ui.Modifier declared in androidx.compose.foundation.layout.PaddingKt' type=androidx.compose.ui.Modifier origin=null
+                            $receiver: CALL 'public final fun size-3ABfNKs (size: androidx.compose.ui.unit.Dp): androidx.compose.ui.Modifier declared in androidx.compose.foundation.layout.SizeKt' type=androidx.compose.ui.Modifier origin=null
+                              $receiver: GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:Companion type:androidx.compose.ui.Modifier.Companion visibility:public [final,static] declared in androidx.compose.ui.Modifier' type=androidx.compose.ui.Modifier.Companion origin=null
+                              size: CALL 'public final fun <get-dp> (): androidx.compose.ui.unit.Dp [inline] declared in androidx.compose.ui.unit.DpKt' type=androidx.compose.ui.unit.Dp origin=GET_PROPERTY
+                                $receiver: CONST Int type=kotlin.Int value=200
+                            all: CALL 'public final fun <get-dp> (): androidx.compose.ui.unit.Dp [inline] declared in androidx.compose.ui.unit.DpKt' type=androidx.compose.ui.unit.Dp origin=GET_PROPERTY
+                              $receiver: CONST Int type=kotlin.Int value=16
+                          contentAlignment: CALL 'public final fun <get-Center> (): androidx.compose.ui.Alignment declared in androidx.compose.ui.Alignment.Companion' type=androidx.compose.ui.Alignment origin=GET_PROPERTY
+                            $this: GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:Companion type:androidx.compose.ui.Alignment.Companion visibility:public [final,static] declared in androidx.compose.ui.Alignment' type=androidx.compose.ui.Alignment.Companion origin=null
+                          propagateMinConstraints: COMPOSITE type=kotlin.Boolean origin=DEFAULT_VALUE
+                            CONST Boolean type=kotlin.Boolean value=false
+                          content: BLOCK type=@[ExtensionFunctionType] kotlin.Function3<androidx.compose.foundation.layout.BoxScope, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> origin=LAMBDA
+                            COMPOSITE type=kotlin.Unit origin=null
+                            FUNCTION_REFERENCE 'private final fun invoke$lambda$3$lambda$2 ($drinks: kotlin.collections.List<com.menna.caffeine.component.DrinkItem>, $page: kotlin.Int, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>' type=@[ExtensionFunctionType] kotlin.Function3<androidx.compose.foundation.layout.BoxScope, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> origin=INLINE_LAMBDA reflectionTarget=null
+                              $drinks: GET_VAR '$drinks: kotlin.collections.List<com.menna.caffeine.component.DrinkItem> declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$3' type=kotlin.collections.List<com.menna.caffeine.component.DrinkItem> origin=null
+                              $page: GET_VAR '$page: kotlin.Int declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$3' type=kotlin.Int origin=null
+                          $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$3' type=androidx.compose.runtime.Composer? origin=null
+                          $changed: CONST Int type=kotlin.Int value=54
+                          $default: CONST Int type=kotlin.Int value=4
+                        BLOCK type=kotlin.Unit origin=ARGUMENTS_REORDERING_FOR_CALL
+                          VAR IR_TEMPORARY_VARIABLE name:tmp0_text type:kotlin.String [val]
+                            CALL 'public final fun <get-name> (): kotlin.String declared in com.menna.caffeine.component.DrinkItem' type=kotlin.String origin=GET_PROPERTY
+                              $this: CALL 'public abstract fun get (index: kotlin.Int): E of kotlin.collections.List [operator] declared in kotlin.collections.List' type=com.menna.caffeine.component.DrinkItem origin=GET_ARRAY_ELEMENT
+                                $this: GET_VAR '$drinks: kotlin.collections.List<com.menna.caffeine.component.DrinkItem> declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$3' type=kotlin.collections.List<com.menna.caffeine.component.DrinkItem> origin=null
+                                index: GET_VAR '$page: kotlin.Int declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$3' type=kotlin.Int origin=null
+                          VAR IR_TEMPORARY_VARIABLE name:tmp1_style type:androidx.compose.ui.text.TextStyle [val]
+                            CALL 'public final fun <get-titleLarge> (): androidx.compose.ui.text.TextStyle declared in androidx.compose.material3.Typography' type=androidx.compose.ui.text.TextStyle origin=GET_PROPERTY
+                              $this: CALL 'public final fun <get-typography> ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): androidx.compose.material3.Typography declared in androidx.compose.material3.MaterialTheme' type=androidx.compose.material3.Typography origin=GET_PROPERTY
+                                $this: GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:INSTANCE type:androidx.compose.material3.MaterialTheme visibility:public [final,static] declared in androidx.compose.material3.MaterialTheme' type=androidx.compose.material3.MaterialTheme origin=null
+                                $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$3' type=androidx.compose.runtime.Composer? origin=null
+                                $changed: GET_FIELD 'FIELD name:$stable type:kotlin.Int visibility:public [final,static] declared in androidx.compose.material3.MaterialTheme' type=kotlin.Int origin=null
+                          VAR IR_TEMPORARY_VARIABLE name:tmp2_fontWeight type:androidx.compose.ui.text.font.FontWeight [val]
+                            CALL 'public final fun <get-Bold> (): androidx.compose.ui.text.font.FontWeight declared in androidx.compose.ui.text.font.FontWeight.Companion' type=androidx.compose.ui.text.font.FontWeight origin=GET_PROPERTY
+                              $this: GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:Companion type:androidx.compose.ui.text.font.FontWeight.Companion visibility:public [final,static] declared in androidx.compose.ui.text.font.FontWeight' type=androidx.compose.ui.text.font.FontWeight.Companion origin=null
+                          VAR IR_TEMPORARY_VARIABLE name:tmp3_fontSize type:androidx.compose.ui.unit.TextUnit [val]
+                            CALL 'public final fun <get-sp> (): androidx.compose.ui.unit.TextUnit declared in androidx.compose.ui.unit.TextUnitKt' type=androidx.compose.ui.unit.TextUnit origin=GET_PROPERTY
+                              $receiver: CONST Int type=kotlin.Int value=24
+                          VAR IR_TEMPORARY_VARIABLE name:tmp4_textAlign type:androidx.compose.ui.text.style.TextAlign [val]
+                            CALL 'public final fun getCenter-e0LSkKk (): androidx.compose.ui.text.style.TextAlign declared in androidx.compose.ui.text.style.TextAlign.Companion' type=androidx.compose.ui.text.style.TextAlign origin=GET_PROPERTY
+                              $this: GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:Companion type:androidx.compose.ui.text.style.TextAlign.Companion visibility:public [final,static] declared in androidx.compose.ui.text.style.TextAlign' type=androidx.compose.ui.text.style.TextAlign.Companion origin=null
+                          VAR IR_TEMPORARY_VARIABLE name:tmp5_modifier type:androidx.compose.ui.Modifier [val]
+                            CALL 'public final fun padding-qDBjuR0$default (start: androidx.compose.ui.unit.Dp, top: androidx.compose.ui.unit.Dp, end: androidx.compose.ui.unit.Dp, bottom: androidx.compose.ui.unit.Dp, $mask0: kotlin.Int, $handler: kotlin.Any?): androidx.compose.ui.Modifier declared in androidx.compose.foundation.layout.PaddingKt' type=androidx.compose.ui.Modifier origin=DEFAULT_DISPATCH_CALL
+                              $receiver: GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:Companion type:androidx.compose.ui.Modifier.Companion visibility:public [final,static] declared in androidx.compose.ui.Modifier' type=androidx.compose.ui.Modifier.Companion origin=null
+                              start: COMPOSITE type=androidx.compose.ui.unit.Dp origin=DEFAULT_VALUE
+                                CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.unit.Dp origin=null
+                                  <T>: kotlin.Float
+                                  <R>: androidx.compose.ui.unit.Dp
+                                  v: CONST Float type=kotlin.Float value=0.0
+                              top: CALL 'public final fun <get-dp> (): androidx.compose.ui.unit.Dp [inline] declared in androidx.compose.ui.unit.DpKt' type=androidx.compose.ui.unit.Dp origin=GET_PROPERTY
+                                $receiver: CONST Int type=kotlin.Int value=8
+                              end: COMPOSITE type=androidx.compose.ui.unit.Dp origin=DEFAULT_VALUE
+                                CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.unit.Dp origin=null
+                                  <T>: kotlin.Float
+                                  <R>: androidx.compose.ui.unit.Dp
+                                  v: CONST Float type=kotlin.Float value=0.0
+                              bottom: COMPOSITE type=androidx.compose.ui.unit.Dp origin=DEFAULT_VALUE
+                                CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.unit.Dp origin=null
+                                  <T>: kotlin.Float
+                                  <R>: androidx.compose.ui.unit.Dp
+                                  v: CONST Float type=kotlin.Float value=0.0
+                              $mask0: CONST Int type=kotlin.Int value=13
+                              $handler: CONST Null type=kotlin.Any? value=null
+                          CALL 'public final fun Text--4IGK_g (text: kotlin.String, modifier: androidx.compose.ui.Modifier?, color: androidx.compose.ui.graphics.Color, fontSize: androidx.compose.ui.unit.TextUnit, fontStyle: androidx.compose.ui.text.font.FontStyle?, fontWeight: androidx.compose.ui.text.font.FontWeight?, fontFamily: androidx.compose.ui.text.font.FontFamily?, letterSpacing: androidx.compose.ui.unit.TextUnit, textDecoration: androidx.compose.ui.text.style.TextDecoration?, textAlign: androidx.compose.ui.text.style.TextAlign?, lineHeight: androidx.compose.ui.unit.TextUnit, overflow: androidx.compose.ui.text.style.TextOverflow, softWrap: kotlin.Boolean, maxLines: kotlin.Int, minLines: kotlin.Int, onTextLayout: kotlin.Function1<androidx.compose.ui.text.TextLayoutResult, kotlin.Unit>?, style: androidx.compose.ui.text.TextStyle?, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $changed1: kotlin.Int, $default: kotlin.Int): kotlin.Unit declared in androidx.compose.material3.TextKt' type=kotlin.Unit origin=null
+                            text: GET_VAR 'val tmp0_text: kotlin.String [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$3' type=kotlin.String origin=null
+                            modifier: GET_VAR 'val tmp5_modifier: androidx.compose.ui.Modifier [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$3' type=androidx.compose.ui.Modifier origin=null
+                            color: COMPOSITE type=androidx.compose.ui.graphics.Color origin=DEFAULT_VALUE
+                              CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.graphics.Color origin=null
+                                <T>: kotlin.Long
+                                <R>: androidx.compose.ui.graphics.Color
+                                v: CONST Long type=kotlin.Long value=0
+                            fontSize: GET_VAR 'val tmp3_fontSize: androidx.compose.ui.unit.TextUnit [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$3' type=androidx.compose.ui.unit.TextUnit origin=null
+                            fontStyle: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+                              CONST Null type=kotlin.Nothing? value=null
+                            fontWeight: GET_VAR 'val tmp2_fontWeight: androidx.compose.ui.text.font.FontWeight [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$3' type=androidx.compose.ui.text.font.FontWeight origin=null
+                            fontFamily: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+                              CONST Null type=kotlin.Nothing? value=null
+                            letterSpacing: COMPOSITE type=androidx.compose.ui.unit.TextUnit origin=DEFAULT_VALUE
+                              CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.unit.TextUnit origin=null
+                                <T>: kotlin.Long
+                                <R>: androidx.compose.ui.unit.TextUnit
+                                v: CONST Long type=kotlin.Long value=0
+                            textDecoration: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+                              CONST Null type=kotlin.Nothing? value=null
+                            textAlign: GET_VAR 'val tmp4_textAlign: androidx.compose.ui.text.style.TextAlign [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$3' type=androidx.compose.ui.text.style.TextAlign origin=null
+                            lineHeight: COMPOSITE type=androidx.compose.ui.unit.TextUnit origin=DEFAULT_VALUE
+                              CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.unit.TextUnit origin=null
+                                <T>: kotlin.Long
+                                <R>: androidx.compose.ui.unit.TextUnit
+                                v: CONST Long type=kotlin.Long value=0
+                            overflow: COMPOSITE type=androidx.compose.ui.text.style.TextOverflow origin=DEFAULT_VALUE
+                              CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.text.style.TextOverflow origin=null
+                                <T>: kotlin.Int
+                                <R>: androidx.compose.ui.text.style.TextOverflow
+                                v: CONST Int type=kotlin.Int value=0
+                            softWrap: COMPOSITE type=kotlin.Boolean origin=DEFAULT_VALUE
+                              CONST Boolean type=kotlin.Boolean value=false
+                            maxLines: COMPOSITE type=kotlin.Int origin=DEFAULT_VALUE
+                              CONST Int type=kotlin.Int value=0
+                            minLines: COMPOSITE type=kotlin.Int origin=DEFAULT_VALUE
+                              CONST Int type=kotlin.Int value=0
+                            onTextLayout: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+                              CONST Null type=kotlin.Nothing? value=null
+                            style: GET_VAR 'val tmp1_style: androidx.compose.ui.text.TextStyle [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$3' type=androidx.compose.ui.text.TextStyle origin=null
+                            $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$3' type=androidx.compose.runtime.Composer? origin=null
+                            $changed: CONST Int type=kotlin.Int value=199728
+                            $changed1: CONST Int type=kotlin.Int value=0
+                            $default: CONST Int type=kotlin.Int value=64980
+                      CALL 'public final fun sourceInformationMarkerEnd (composer: androidx.compose.runtime.Composer): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                        composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$3' type=androidx.compose.runtime.Composer? origin=null
+                FUN BRIDGE name:invoke visibility:public modality:OPEN <> ($this:com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>, p1:kotlin.Any?, p2:kotlin.Any?, p3:kotlin.Any?, p4:kotlin.Any?) returnType:kotlin.Any?
+                  $this: VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>
+                  VALUE_PARAMETER BRIDGE name:p1 index:0 type:kotlin.Any?
+                  VALUE_PARAMETER BRIDGE name:p2 index:1 type:kotlin.Any?
+                  VALUE_PARAMETER BRIDGE name:p3 index:2 type:kotlin.Any?
+                  VALUE_PARAMETER BRIDGE name:p4 index:3 type:kotlin.Any?
+                  EXPRESSION_BODY
+                    RETURN type=kotlin.Nothing from='public open fun invoke (p1: kotlin.Any?, p2: kotlin.Any?, p3: kotlin.Any?, p4: kotlin.Any?): kotlin.Any? declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>'
+                      CALL 'public final fun invoke ($this$HorizontalPager: androidx.compose.foundation.pager.PagerScope, page: kotlin.Int, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>' type=kotlin.Unit origin=BRIDGE_DELEGATION
+                        $this: GET_VAR '<this>: com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided> declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke' type=com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided> origin=null
+                        $this$HorizontalPager: TYPE_OP type=androidx.compose.foundation.pager.PagerScope origin=IMPLICIT_CAST typeOperand=androidx.compose.foundation.pager.PagerScope
+                          GET_VAR 'p1: kotlin.Any? declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke' type=kotlin.Any? origin=null
+                        page: TYPE_OP type=kotlin.Int origin=IMPLICIT_CAST typeOperand=kotlin.Int
+                          GET_VAR 'p2: kotlin.Any? declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke' type=kotlin.Any? origin=null
+                        $composer: TYPE_OP type=androidx.compose.runtime.Composer origin=IMPLICIT_CAST typeOperand=androidx.compose.runtime.Composer
+                          GET_VAR 'p3: kotlin.Any? declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke' type=kotlin.Any? origin=null
+                        $changed: TYPE_OP type=kotlin.Int origin=IMPLICIT_CAST typeOperand=kotlin.Int
+                          GET_VAR 'p4: kotlin.Any? declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke' type=kotlin.Any? origin=null
+              CONSTRUCTOR_CALL 'public/*package*/ constructor <init> ($pagerState: androidx.compose.foundation.pager.PagerState, $drinks: kotlin.collections.List<com.menna.caffeine.component.DrinkItem>) [primary] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>' type=com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided> origin=null
+                $pagerState: GET_VAR '$pagerState: androidx.compose.foundation.pager.PagerState declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2' type=androidx.compose.foundation.pager.PagerState origin=null
+                $drinks: GET_VAR '$drinks: kotlin.collections.List<com.menna.caffeine.component.DrinkItem> declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2' type=kotlin.collections.List<com.menna.caffeine.component.DrinkItem> origin=null
+            $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2' type=androidx.compose.runtime.Composer? origin=null
+            $changed: CONST Int type=kotlin.Int value=54
+          $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2' type=androidx.compose.runtime.Composer? origin=null
+          $changed: CONST Int type=kotlin.Int value=197040
+          $changed1: CONST Int type=kotlin.Int value=24576
+          $default: CONST Int type=kotlin.Int value=16344
+      CALL 'public final fun sourceInformationMarkerEnd (composer: androidx.compose.runtime.Composer): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+        composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2' type=androidx.compose.runtime.Composer? origin=null
+
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:48)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrSourceCompilerForInline.generateLambdaBody(IrSourceCompilerForInline.kt:67)
+	at org.jetbrains.kotlin.codegen.inline.ExpressionLambda.generateLambdaBody(LambdaInfo.kt:72)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrInlineCodegen.genValueAndPut(IrInlineCodegen.kt:100)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall$handleParameter(ExpressionCodegen.kt:561)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:589)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrCall.accept(IrCall.kt:24)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:524)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:538)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.visitors.IrElementVisitor$DefaultImpls.visitBlock(IrElementVisitor.kt:126)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:409)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrBlock.accept(IrBlock.kt:18)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitWhen(ExpressionCodegen.kt:1050)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitWhen(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrWhen.accept(IrWhen.kt:24)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:524)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:529)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrBlockBody.accept(IrBlockBody.kt:20)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.generate(ExpressionCodegen.kt:236)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.doGenerate(FunctionCodegen.kt:124)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:45)
+	... 56 more
+Caused by: java.lang.RuntimeException: Exception while generating code for:
+FUN LOCAL_FUNCTION_FOR_LAMBDA name:invoke$lambda$1$lambda$0 visibility:private modality:FINAL <> ($pageOffset:kotlin.Float, $this$graphicsLayer:androidx.compose.ui.graphics.GraphicsLayerScope) returnType:kotlin.Unit?
+  VALUE_PARAMETER BOUND_VALUE_PARAMETER name:$pageOffset index:0 type:kotlin.Float
+  VALUE_PARAMETER name:$this$graphicsLayer index:1 type:androidx.compose.ui.graphics.GraphicsLayerScope
+  BLOCK_BODY
+    VAR name:scale type:kotlin.Float [val]
+      CALL 'public final fun lerp (start: kotlin.Float, stop: kotlin.Float, fraction: kotlin.Float): kotlin.Float declared in androidx.compose.ui.util.MathHelpersKt' type=kotlin.Float origin=null
+        start: CONST Float type=kotlin.Float value=0.6
+        stop: CONST Float type=kotlin.Float value=1.0
+        fraction: CALL 'public final fun minus (other: kotlin.Float): kotlin.Float [operator] declared in kotlin.Float' type=kotlin.Float origin=MINUS
+          $this: CONST Float type=kotlin.Float value=1.0
+          other: CALL 'public final fun coerceIn (minimumValue: kotlin.Float, maximumValue: kotlin.Float): kotlin.Float declared in kotlin.ranges.RangesKt' type=kotlin.Float origin=null
+            $receiver: GET_VAR '$pageOffset: kotlin.Float declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$1$lambda$0' type=kotlin.Float origin=null
+            minimumValue: CONST Float type=kotlin.Float value=0.0
+            maximumValue: CONST Float type=kotlin.Float value=1.0
+    CALL 'public abstract fun <set-scaleX> (<set-?>: kotlin.Float): kotlin.Unit declared in androidx.compose.ui.graphics.GraphicsLayerScope' type=kotlin.Unit origin=EQ
+      $this: GET_VAR '$this$graphicsLayer: androidx.compose.ui.graphics.GraphicsLayerScope declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$1$lambda$0' type=androidx.compose.ui.graphics.GraphicsLayerScope origin=null
+      <set-?>: GET_VAR 'val scale: kotlin.Float [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$1$lambda$0' type=kotlin.Float origin=null
+    CALL 'public abstract fun <set-scaleY> (<set-?>: kotlin.Float): kotlin.Unit declared in androidx.compose.ui.graphics.GraphicsLayerScope' type=kotlin.Unit origin=EQ
+      $this: GET_VAR '$this$graphicsLayer: androidx.compose.ui.graphics.GraphicsLayerScope declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$1$lambda$0' type=androidx.compose.ui.graphics.GraphicsLayerScope origin=null
+      <set-?>: GET_VAR 'val scale: kotlin.Float [val] declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$1$lambda$0' type=kotlin.Float origin=null
+    CALL 'public abstract fun <set-alpha> (<set-?>: kotlin.Float): kotlin.Unit declared in androidx.compose.ui.graphics.GraphicsLayerScope' type=kotlin.Unit origin=EQ
+      $this: GET_VAR '$this$graphicsLayer: androidx.compose.ui.graphics.GraphicsLayerScope declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$1$lambda$0' type=androidx.compose.ui.graphics.GraphicsLayerScope origin=null
+      <set-?>: CALL 'public final fun lerp (start: kotlin.Float, stop: kotlin.Float, fraction: kotlin.Float): kotlin.Float declared in androidx.compose.ui.util.MathHelpersKt' type=kotlin.Float origin=null
+        start: CONST Float type=kotlin.Float value=0.4
+        stop: CONST Float type=kotlin.Float value=1.0
+        fraction: CALL 'public final fun minus (other: kotlin.Float): kotlin.Float [operator] declared in kotlin.Float' type=kotlin.Float origin=MINUS
+          $this: CONST Float type=kotlin.Float value=1.0
+          other: CALL 'public final fun coerceIn (minimumValue: kotlin.Float, maximumValue: kotlin.Float): kotlin.Float declared in kotlin.ranges.RangesKt' type=kotlin.Float origin=null
+            $receiver: GET_VAR '$pageOffset: kotlin.Float declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$1$lambda$0' type=kotlin.Float origin=null
+            minimumValue: CONST Float type=kotlin.Float value=0.0
+            maximumValue: CONST Float type=kotlin.Float value=1.0
+    WHEN type=kotlin.Unit origin=IF
+      BRANCH
+        if: CALL 'public final fun less (arg0: kotlin.Float, arg1: kotlin.Float): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=LT
+          arg0: GET_VAR '$pageOffset: kotlin.Float declared in com.menna.caffeine.component.ChooseDrinkPagerKt.ChooseDrinkPager$lambda$2.<no name provided>.invoke$lambda$1$lambda$0' type=kotlin.Float origin=null
+          arg1: CONST Float type=kotlin.Float value=0.5
+        then: BLOCK type=kotlin.Unit origin=null
+          SET_FIELD 'FIELD IR_EXTERNAL_JAVA_DECLARATION_STUB name:translationZ type:kotlin.Int visibility:public [final,static] declared in android.R.attr' type=kotlin.Unit superQualifierSymbol=android.R.attr origin=EQ
+            value: CONST Int type=kotlin.Int value=1
+
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:48)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate$default(FunctionCodegen.kt:41)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generateMethodNode(ClassCodegen.kt:407)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generateMethod(ClassCodegen.kt:424)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generate(ClassCodegen.kt:169)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitClass(ExpressionCodegen.kt:952)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitClass(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.declarations.IrClass.accept(IrClass.kt:72)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:524)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:538)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.visitors.IrElementVisitor$DefaultImpls.visitBlock(IrElementVisitor.kt:126)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:409)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrBlock.accept(IrBlock.kt:18)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.gen(ExpressionCodegen.kt:213)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrCallGenerator.genValueAndPut(IrCallGenerator.kt:48)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall$handleParameter(ExpressionCodegen.kt:561)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:589)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrCall.accept(IrCall.kt:24)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.gen(ExpressionCodegen.kt:213)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrCallGenerator.genValueAndPut(IrCallGenerator.kt:48)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall$handleParameter(ExpressionCodegen.kt:561)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:589)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrCall.accept(IrCall.kt:24)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:524)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:538)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.visitors.IrElementVisitor$DefaultImpls.visitComposite(IrElementVisitor.kt:129)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitComposite(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitComposite(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrComposite.accept(IrComposite.kt:18)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:524)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:538)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.visitors.IrElementVisitor$DefaultImpls.visitBlock(IrElementVisitor.kt:126)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:409)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrBlock.accept(IrBlock.kt:18)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:524)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:529)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrBlockBody.accept(IrBlockBody.kt:20)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.generate(ExpressionCodegen.kt:236)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.doGenerate(FunctionCodegen.kt:124)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:45)
+	... 80 more
+Caused by: java.lang.AssertionError: access of const val: SET_FIELD 'FIELD IR_EXTERNAL_JAVA_DECLARATION_STUB name:translationZ type:kotlin.Int visibility:public [final,static] declared in android.R.attr' type=kotlin.Unit superQualifierSymbol=android.R.attr origin=EQ
+  value: CONST Int type=kotlin.Int value=1
+
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitFieldAccess(ExpressionCodegen.kt:813)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitFieldAccess(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.visitors.IrElementVisitor$DefaultImpls.visitSetField(IrElementVisitor.kt:210)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitSetField(ExpressionCodegen.kt:860)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitSetField(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrSetField.accept(IrSetField.kt:21)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:524)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:538)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.visitors.IrElementVisitor$DefaultImpls.visitBlock(IrElementVisitor.kt:126)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:409)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrBlock.accept(IrBlock.kt:18)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitWhen(ExpressionCodegen.kt:1050)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitWhen(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrWhen.accept(IrWhen.kt:24)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:524)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:529)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrBlockBody.accept(IrBlockBody.kt:20)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.generate(ExpressionCodegen.kt:236)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.doGenerate(FunctionCodegen.kt:124)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:45)
+	... 127 more
+
+
