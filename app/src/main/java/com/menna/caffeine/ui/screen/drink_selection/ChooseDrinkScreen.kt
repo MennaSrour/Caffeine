@@ -2,6 +2,7 @@ package com.menna.caffeine.ui.screen.drink_selection
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.systemBarsPadding
@@ -55,11 +56,12 @@ fun ChooseDrinkContent(
         ChooseDrinkPager(
             onDrinkSelected = onDrinkSelected
         )
+        Spacer(modifier = Modifier.weight(1f))
         TextIconButton(
             onclickNext,
             "Continue",
             R.drawable.arrow_right,
-            Modifier.align(Alignment.CenterHorizontally)
+            Modifier.align(Alignment.CenterHorizontally).padding(bottom = 50.dp)
         )
     }
 }

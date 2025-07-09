@@ -7,8 +7,9 @@ object AppDestination {
     const val FOURTH_BASE = "fourthScreen"
     const val FOURTH = "$FOURTH_BASE/{volume}/{scale}"
     const val FIFTH = "fifthScreen"
-
+    const val SIX = "SixScreen"
+    const val SEVEN = "SevenScreen"
     fun fourthWithArgs(volume: Int, scale: String): String {
-        return "$FOURTH_BASE/$volume/${scale.toString()}"
+        return "$FOURTH_BASE/$volume/${scale}"
     }
 }

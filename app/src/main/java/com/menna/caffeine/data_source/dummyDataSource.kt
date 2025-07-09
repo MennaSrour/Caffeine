@@ -1,16 +1,24 @@
 package com.menna.caffeine.data_source
 
+import com.menna.caffeine.R
+import com.menna.caffeine.ui.component.Snack
 import com.menna.caffeine.ui.screen.select_size_and_beans.SelectSizeState
+import com.menna.caffeine.ui.screen.select_size_and_beans.SelectSizeState.CupSize
+import com.menna.caffeine.ui.screen.take_away.Coffee
+import com.menna.caffeine.ui.screen.take_away.CoffeeImages
+import kotlin.collections.listOf
 
-interface SelectSizeDataSource {
+interface DummyDataSource {
     fun getDefaultUiState(): SelectSizeState
     fun getCupSizes(): List<SelectSizeState.CupSize>
     fun getSeedsSizes(): List<SelectSizeState.BeansSize>
     fun getCupVolumeForSize(size: SelectSizeState.CupSize): Int
     fun getCupScaleForSize(size: SelectSizeState.CupSize): Float
+    fun getSnackList(): List<Snack>
+    fun getCoffeeList(): List<Coffee>
 }
 
-class SelectSizeDataSourceImpl : SelectSizeDataSource {
+class DummyDataSourceImpl : DummyDataSource {
 
     override fun getDefaultUiState(): SelectSizeState {
         return SelectSizeState(
@@ -44,4 +52,39 @@ class SelectSizeDataSourceImpl : SelectSizeDataSource {
     override fun getCupScaleForSize(size: SelectSizeState.CupSize): Float {
         return size.getScale()
     }
+
+    override fun getSnackList(): List<Snack> {
+        return listOf(
+            Snack(1, "Chocolate Muffin", R.drawable.chocolate),
+            Snack(2, "CupCake", R.drawable.cupcake),
+            Snack(3, "Cookies", R.drawable.cookies),
+            Snack(4, "Cinnamon", R.drawable.cinnamon),
+            Snack(5, "Croissant", R.drawable.croissant),
+            Snack(6, "Oreo", R.drawable.oreo),
+        )
+    }
+
+    override fun getCoffeeList(): List<Coffee> {
+        return listOf(
+            Coffee(
+                id = 1,
+                name = "Espresso",
+                images = CoffeeImages(
+                    cupBody = R.drawable.espresso_empty_cup,
+                    cover = R.drawable.espresso_cover,
+                    top = R.drawable.espresso_top
+                ),
+            ),
+            Coffee(
+                id = 2,
+                name = "Latte",
+                images = CoffeeImages(
+                    cupBody = R.drawable.latte_empty_cup,
+                    cover = R.drawable.lattee_cover,
+                    top = R.drawable.lattee_top
+                )
+            )
+        )
+    }
+
 }

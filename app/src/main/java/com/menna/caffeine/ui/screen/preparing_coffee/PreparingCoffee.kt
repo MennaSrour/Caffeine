@@ -2,10 +2,12 @@ package com.menna.caffeine.ui.screen.preparing_coffee
 
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
@@ -43,20 +45,24 @@ fun PreparingCoffeeContent(
 ) {
     Column(
         modifier = Modifier.fillMaxSize()
+            .systemBarsPadding()
+
     ) {
         SelectSizeCup(
             volume = volume,
             cupScale = scale,
         )
+
         LoadingLine(
             modifier = Modifier
                 .padding(top = 101.dp)
                 .fillMaxWidth()
                 .height(50.dp)
         )
+        Spacer(modifier = Modifier.weight(1f))
         PreparingText(
             Modifier
-                .align(Alignment.End)
+                .align(Alignment.End).padding(bottom = 50.dp)
         )
     }
 }

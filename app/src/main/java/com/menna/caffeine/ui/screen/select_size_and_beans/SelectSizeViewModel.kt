@@ -4,10 +4,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import com.menna.caffeine.data_source.SelectSizeDataSource
+import com.menna.caffeine.data_source.DummyDataSource
 
 class SelectSizeViewModel(
-    private val dataSource: SelectSizeDataSource
+    private val dataSource: DummyDataSource
 ) : ViewModel() {
 
     var uiState by mutableStateOf(dataSource.getDefaultUiState())

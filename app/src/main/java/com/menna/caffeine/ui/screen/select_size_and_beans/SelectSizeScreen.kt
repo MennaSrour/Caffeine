@@ -2,6 +2,7 @@ package com.menna.caffeine.ui.screen.select_size_and_beans
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.systemBarsPadding
@@ -52,8 +53,8 @@ fun SelectSizeContent(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .systemBarsPadding()
-            .background(color = Color(0xFFFFFFFF)),
+            .background(color = Color(0xFFFFFFFF))
+            .systemBarsPadding(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         SizeSelectorHeader(
@@ -77,12 +78,12 @@ fun SelectSizeContent(
             onSizeSelected = onSeedsSelected,
             modifier = Modifier.padding(top = 16.dp)
         )
-
+        Spacer(modifier = Modifier.weight(1f))
         TextIconButton(
             onClickNext,
             "Continue",
             R.drawable.arrow_right,
-            Modifier.padding(top = 24.dp)
+            Modifier.padding(top = 24.dp, bottom = 50.dp)
         )
     }
 }
