@@ -45,7 +45,7 @@ fun SnackSelectionScreen(
         pagerState = pagerState,
         onItemClick = { selectedSnack ->
             viewModel.selectSnack(selectedSnack)
-            navController.navigate("${AppDestination.SEVEN}/${selectedSnack.id}")
+            navController.navigate(AppDestination.sevenWithArgs(selectedSnack.id))
         },
         onCancelClick = { navController.popBackStack(AppDestination.FIRST, false) }
     )

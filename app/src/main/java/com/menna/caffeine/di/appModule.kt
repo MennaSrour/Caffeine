@@ -16,10 +16,7 @@ val appModule = module {
     viewModel { SelectSizeViewModel(get()) }
     viewModel { ThankYouViewModel(get()) }
     viewModel { SnackSelectionViewModel(get()) }
-    viewModel { (handle: SavedStateHandle) ->
-        OrderViewModel(
-            savedStateHandle = handle,
-            dummyDataSource = get()
-        )
+    viewModel {
+        OrderViewModel(get())
     }
 }

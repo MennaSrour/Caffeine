@@ -84,7 +84,7 @@ fun OrderReadyScreen(
         uiState = uiState,
         onTakeAwayToggled = viewModel::onTakeAwayToggled,
         onTakeSnackClicked = {
-            navController.navigate(AppDestination.FOURTH)
+            navController.navigate(AppDestination.SIX)
         },
         onCloseClicked = {
             navController.popBackStack(AppDestination.FIRST,false)

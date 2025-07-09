@@ -55,21 +55,13 @@ fun CaffieneNavGraph(navController: NavHostController) {
                 navController
             )
         }
-        composable(
-            route = AppDestination.SEVEN + "/{selectedItemId}",
-            arguments = listOf(
-                navArgument("selectedItemId") {
-                    type = NavType.IntType
-                }
-            )
-        ) { backStackEntry ->
-            val selectedItemId = backStackEntry.arguments?.getInt("selectedItemId") ?: 1
+        composable(AppDestination.SEVEN) { backStackEntry ->
+            val snackId = backStackEntry.arguments?.getString("id")?.toIntOrNull() ?: 0
             ThankYouScreen(
-                navController = navController,
-                selectedItemId = selectedItemId
+                selectedItemId = snackId,
+                navController =navController,
             )
         }
-
 
     }
 }

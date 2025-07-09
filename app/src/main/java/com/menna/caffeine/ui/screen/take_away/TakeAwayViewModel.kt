@@ -8,16 +8,16 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import org.koin.core.KoinApplication.Companion.init
 
 class OrderViewModel(
-    savedStateHandle: SavedStateHandle,
     private val dummyDataSource: DummyDataSource
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(OrderUiState())
     val uiState: StateFlow<OrderUiState> = _uiState.asStateFlow()
 
-    private val coffeeId: Int = checkNotNull(savedStateHandle["coffeeId"])
+    private val coffeeId: Int = 2
 
     init {
         loadInitialCoffee()
