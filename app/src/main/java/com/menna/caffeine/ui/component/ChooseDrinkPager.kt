@@ -1,4 +1,4 @@
-package com.menna.caffeine.component
+package com.menna.caffeine.ui.component
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
@@ -25,7 +25,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.util.lerp
 import com.menna.caffeine.R
-import com.menna.caffeine.ui.theme.urabanist
+import com.menna.caffeine.ui.theme.urbanisation
 import kotlin.math.absoluteValue
 
 data class DrinkItem(
@@ -102,7 +102,7 @@ fun ChooseDrinkPager(
                 color = Color(0xFF1F1F1F),
                 fontSize = 32.sp,
                 fontWeight = FontWeight.Bold,
-                fontFamily = urabanist,
+                fontFamily = urbanisation,
                 letterSpacing = .25.sp,
                 lineHeight = 32.sp,
                 modifier = Modifier

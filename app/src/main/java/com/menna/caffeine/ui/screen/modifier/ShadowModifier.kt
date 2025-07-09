@@ -1,5 +1,6 @@
-package com.menna.caffeine.component.utils
+package com.menna.caffeine.ui.screen.modifier
 
+import android.R.attr.layoutDirection
 import android.graphics.BlurMaskFilter
 import androidx.compose.runtime.Stable
 import androidx.compose.ui.Modifier

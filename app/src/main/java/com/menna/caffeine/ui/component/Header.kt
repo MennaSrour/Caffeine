@@ -1,4 +1,4 @@
-package com.menna.caffeine.component
+package com.menna.caffeine.ui.component
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background

@@ -1,4 +1,4 @@
-package com.menna.caffeine.screen
+package com.menna.caffeine.ui.screen.start_screen
 
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder

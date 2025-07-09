@@ -1,4 +1,4 @@
-package com.menna.caffeine.component
+package com.menna.caffeine.ui.component
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.material3.Text
@@ -22,7 +21,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.menna.caffeine.R
-import com.menna.caffeine.ui.theme.sniglet
+import com.menna.caffeine.ui.theme.singlet
 import kotlinx.coroutines.delay
 
 @Composable
@@ -42,7 +41,7 @@ fun HocusText(
             Text(
                 text = "Hocus",
                 color = Color.Black,
-                fontFamily = sniglet,
+                fontFamily = singlet,
                 fontSize = 32.sp,
                 lineHeight = 50.sp,
                 letterSpacing = .25.sp,
@@ -50,7 +49,7 @@ fun HocusText(
             Text(
                 text = "Pocus",
                 color = Color.Black,
-                fontFamily = sniglet,
+                fontFamily = singlet,
                 fontSize = 32.sp,
                 lineHeight = 50.sp,
                 letterSpacing = .25.sp,
@@ -58,7 +57,7 @@ fun HocusText(
             Text(
                 text = "I Need Coffee",
                 color = Color.Black,
-                fontFamily = sniglet,
+                fontFamily = singlet,
                 fontSize = 32.sp,
                 lineHeight = 50.sp,
                 letterSpacing = .25.sp,
@@ -67,7 +66,7 @@ fun HocusText(
                 text = "to Focus",
                 modifier = Modifier.padding(top = 8.dp),
                 color = Color.Black,
-                fontFamily = sniglet,
+                fontFamily = singlet,
                 fontSize = 32.sp,
                 lineHeight = 50.sp,
                 letterSpacing = .25.sp,

@@ -1,4 +1,4 @@
-package com.menna.caffeine.component
+package com.menna.caffeine.ui.component
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
@@ -9,7 +9,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.menna.caffeine.ui.theme.urabanist
+import com.menna.caffeine.ui.theme.urbanisation
 
 @Composable
 fun   WelcomeText(name: String) {
@@ -21,7 +21,7 @@ fun   WelcomeText(name: String) {
             color = Color(0xFFB3B3B3),
             fontSize = 36.sp,
             fontWeight = FontWeight.Bold,
-            fontFamily = urabanist,
+            fontFamily = urbanisation,
             letterSpacing = .25.sp,
             lineHeight = 36.sp,
         )
@@ -30,7 +30,7 @@ fun   WelcomeText(name: String) {
             color = Color(0xFF3B3B3B),
             fontSize = 36.sp,
             fontWeight = FontWeight.Bold,
-            fontFamily = urabanist,
+            fontFamily = urbanisation,
             letterSpacing = .25.sp,
             lineHeight = 36.sp,
         )
@@ -39,7 +39,7 @@ fun   WelcomeText(name: String) {
             color = Color(0xCC1F1F1F),
             fontSize = 16.sp,
             fontWeight = FontWeight.Bold,
-            fontFamily = urabanist,
+            fontFamily = urbanisation,
             letterSpacing = .25.sp,
             lineHeight = 16.sp,
         )

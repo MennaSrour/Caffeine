@@ -1,10 +1,11 @@
-package com.menna.caffeine.component
+package com.menna.caffeine.ui.component
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
@@ -18,7 +19,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.menna.caffeine.ui.theme.urabanist
+import com.menna.caffeine.ui.theme.urbanisation
 
 @Composable
 fun TextIconButton(
@@ -39,9 +40,8 @@ fun TextIconButton(
             hoveredElevation = 10.dp
         ),
         modifier = modifier
-            .padding(bottom = 50.dp)
-            .wrapContentSize()
-            .padding(horizontal = 32.dp, vertical = 16.dp)
+            .wrapContentSize(),
+        contentPadding = PaddingValues(vertical = 16.dp, horizontal = 32.dp)
     ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
@@ -52,13 +52,14 @@ fun TextIconButton(
                 color = Color(0xDEFFFFFF),
                 fontSize = 16.sp,
                 fontWeight = FontWeight.Bold,
-                fontFamily = urabanist,
+                fontFamily = urbanisation,
                 letterSpacing = .25.sp,
                 lineHeight = 16.sp,
             )
             Image(
                 painter = painterResource(id = icon),
-                contentDescription = "Coffee cup icon"
+                contentDescription = " icon",
+                modifier = Modifier.size(24.dp)
             )
         }
     }
